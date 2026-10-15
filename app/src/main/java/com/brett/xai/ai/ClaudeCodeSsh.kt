@@ -134,13 +134,13 @@ class ClaudeCodeSsh(private val onHostKeyPinned: (String) -> Unit) {
                             "message_start" -> if (emittedText) emit(Ev.Text("\n\n"))
                             "content_block_start" -> {
                                 val b = e["content_block"]?.jsonObject
-                                if (b?.str("type") == "tool_use") emit(Ev.Status("Using ${b.str("name")}…"))
+                                if (b?.str("type") == "tool_use") emit(Ev.Status("Using ${b?.str("name")}…"))
                             }
                             "content_block_delta" -> {
                                 val d = e["delta"]?.jsonObject
                                 if (d?.str("type") == "text_delta") {
                                     sawPartial = true
-                                    val t = d.str("text").orEmpty()
+                                    val t = d?.str("text").orEmpty()
                                     if (t.isNotEmpty()) { emittedText = true; emit(Ev.Text(t)) }
                                 }
                             }

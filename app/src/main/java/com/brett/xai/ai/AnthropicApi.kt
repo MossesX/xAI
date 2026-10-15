@@ -93,7 +93,7 @@ class AnthropicApi {
                     "content_block_delta" -> {
                         val d = ev["delta"]?.jsonObject
                         if (d?.get("type")?.jsonPrimitive?.contentOrNull == "text_delta") {
-                            emit(Ev.Text(d["text"]?.jsonPrimitive?.contentOrNull.orEmpty()))
+                            emit(Ev.Text(d?.get("text")?.jsonPrimitive?.contentOrNull.orEmpty()))
                         }
                     }
                     "message_delta" -> {

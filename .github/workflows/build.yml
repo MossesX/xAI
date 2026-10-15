@@ -1,0 +1,59 @@
+name: Build APK
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Android SDK (preinstalled on runner)
+        run: |
+          echo "ANDROID_HOME=$ANDROID_HOME"
+          yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses >/dev/null 2>&1 || true
+          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-35" "build-tools;35.0.0" >/dev/null
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.9"
+
+      - name: Build debug APK
+        run: |
+          set -o pipefail
+          gradle assembleDebug --no-daemon 2>&1 | tee build.log
+
+      - name: Surface errors
+        if: failure()
+        run: |
+          grep -E "^e: |error:|What went wrong|Could not|Exception|FAILED" build.log | grep -v "^Deprecated" | head -40 \
+            | awk 'BEGIN{n=0} {n++; if (n<=8) print "::error::" $0}'
+
+      - name: Rename
+        run: cp app/build/outputs/apk/debug/app-debug.apk xAI-${{ github.run_number }}.apk
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: xAI-apk
+          path: xAI-*.apk
+
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: build-${{ github.run_number }}
+          name: xAI build ${{ github.run_number }}
+          body: |
+            Debug APK built from ${{ github.sha }}.
+            Install: download the .apk on your phone, open it, allow "install unknown apps" if asked.
+          files: xAI-*.apk

@@ -159,7 +159,7 @@ fun SettingsScreen(vm: AppViewModel, onBack: () -> Unit) {
                     s.apiModel,
                 ) { v -> set { it.copy(apiModel = v) } }
                 Field("…or exact model id", s.apiModel, KeyboardType.Ascii) { v -> set { it.copy(apiModel = v.trim()) } }
-                Toggle("Web search", "Lets the API model search the web for current docs and versions.", s.webSearch) { v -> set { it.copy(webSearch = v) } }
+                Toggle("Web search (API)", "Search the web when answering via the API — see Web research below.", s.webSearch) { v -> set { it.copy(webSearch = v) } }
                 Field("Max output tokens", s.maxTokens.toString(), KeyboardType.Number) { v -> v.toIntOrNull()?.let { t -> set { it.copy(maxTokens = t.coerceIn(256, 128000)) } } }
                 Label("Temperature: ${"%.1f".format(s.temperature)}")
                 Slider(value = s.temperature, onValueChange = { v -> set { it.copy(temperature = (v * 10).toInt() / 10f) } }, valueRange = 0f..1f)
@@ -169,6 +169,31 @@ fun SettingsScreen(vm: AppViewModel, onBack: () -> Unit) {
                     testingApi = true; apiResult = null
                     scope.launch { apiResult = vm.engine.api.test(vm.store.settings.value, vm.store.secrets.value.apiKey); testingApi = false }
                 }
+            }
+
+            // ---------------------------------------------------------------- research
+            Section("Web research", "Lets xAI search the internet and read docs pages live, so answers use current versions and commands — on both Claude Code and the API.") {
+                Toggle("Search the web", "Claude Code gets WebSearch; the API gets its web search tool.", s.webResearch) { v -> set { it.copy(webResearch = v, webSearch = v) } }
+                Toggle("Read full pages", "Open and read docs pages, READMEs and release notes (WebFetch / web fetch).", s.fetchPages) { v -> set { it.copy(fetchPages = v) } }
+                Label("Research depth: up to ${s.researchDepth} searches/page reads per answer")
+                Slider(value = s.researchDepth.toFloat(), onValueChange = { v -> set { it.copy(researchDepth = v.toInt()) } }, valueRange = 1f..20f, steps = 18)
+                OutlinedTextField(
+                    value = s.preferredSources,
+                    onValueChange = { v -> set { it.copy(preferredSources = v) } },
+                    label = { Text("Trusted sources (one per line)") },
+                    modifier = Modifier.fillMaxWidth().height(200.dp),
+                    textStyle = MaterialTheme.typography.bodySmall.copy(fontFamily = FontFamily.Monospace, fontSize = 12.sp),
+                )
+                TextButton(onClick = { set { it.copy(preferredSources = Prompts.DEFAULT_SOURCES) } }) { Text("Reset sources") }
+                Hint("Tip: tap \"Deep research\" above the message box to make xAI dig through several sources and cite them.")
+            }
+
+            // ---------------------------------------------------------------- learning
+            Section("Learning suite", "Tracks, videos, courses and the built-in browser/player.") {
+                Toggle("Open links inside xAI", "Docs, videos and links in answers open in the built-in browser.", s.openLinksInApp) { v -> set { it.copy(openLinksInApp = v) } }
+                Secret("YouTube Data API key (optional)", sec.youtubeApiKey,
+                    hint = "Free from Google Cloud Console → enable \"YouTube Data API v3\" → Credentials. Shows video cards with thumbnails in Learn. Without it, videos still play via the in-app YouTube page.") { v -> setSec { it.copy(youtubeApiKey = v.trim()) } }
+                Field("Library update URL", s.libraryUrl, KeyboardType.Uri, hint = "Learn → ⋮ → Update library pulls new topics from here") { v -> set { it.copy(libraryUrl = v.trim()) } }
             }
 
             // ---------------------------------------------------------------- assistant

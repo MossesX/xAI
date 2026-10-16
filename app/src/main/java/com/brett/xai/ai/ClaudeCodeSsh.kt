@@ -80,7 +80,11 @@ class ClaudeCodeSsh(private val onHostKeyPinned: (String) -> Unit) {
         if (s.ccPartial) p += "--include-partial-messages"
         if (s.ccModel.isNotBlank()) p += listOf("--model", shellQuote(s.ccModel.trim()))
         if (s.ccPermissionMode.isNotBlank()) p += listOf("--permission-mode", shellQuote(s.ccPermissionMode))
-        if (s.ccAllowedTools.isNotBlank()) p += listOf("--allowedTools", shellQuote(s.ccAllowedTools.trim()))
+        val tools = buildList {
+            if (s.ccAllowedTools.isNotBlank()) add(s.ccAllowedTools.trim())
+            if (s.webResearch) { add("WebSearch"); if (s.fetchPages) add("WebFetch") }
+        }.joinToString(" ")
+        if (tools.isNotBlank()) p += listOf("--allowedTools", shellQuote(tools))
         if (!resumeId.isNullOrBlank()) p += listOf("--resume", shellQuote(resumeId))
         p += listOf("--append-system-prompt", shellQuote(systemAppend))
         if (s.ccExtraArgs.isNotBlank()) p += s.ccExtraArgs.trim()
@@ -223,7 +227,8 @@ class ClaudeCodeSsh(private val onHostKeyPinned: (String) -> Unit) {
         val name = b.str("name") ?: "tool"
         val input = b["input"]?.jsonObject
         val detail = input?.let { it.str("command") ?: it.str("file_path") ?: it.str("pattern") ?: it.str("url") ?: it.str("query") }
-        return if (detail != null) "$name: ${detail.take(80)}" else "Using $name…"
+        val label = when (name) { "WebSearch" -> "Searching the web"; "WebFetch" -> "Reading"; else -> name }
+        return if (detail != null) "$label: ${detail.take(80)}" else "$label…"
     }
 
     private fun JsonObject.str(k: String): String? = runCatching { this[k]?.jsonPrimitive?.contentOrNull }.getOrNull()

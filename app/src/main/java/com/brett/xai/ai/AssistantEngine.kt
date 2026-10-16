@@ -65,7 +65,7 @@ class AssistantEngine(private val store: Store) {
         val history = conv.messages
             .filter { !it.error && it.text.isNotBlank() }
             .takeLast(s.historyLimit.coerceAtLeast(1))
-            .map { it.role to Prompts.clean(it.text) }
+            .map { it.role to (Prompts.clean(it.text) + if (it.research && it.role == "user") Prompts.RESEARCH_DIRECTIVE else "") }
         return api.stream(s, store.secrets.value.apiKey, system, history)
     }
 
@@ -77,7 +77,8 @@ class AssistantEngine(private val store: Store) {
             "Claude Code running on the user's server (${s.sshHost}), in headless mode, relayed to the xAI Android app. " +
                 "You can use your tools (read files, run commands, search the web) on that server within the configured permission mode.",
         )
-        val last = conv.messages.last().text
+        val lastMsg = conv.messages.last()
+        val last = lastMsg.text + if (lastMsg.research) Prompts.RESEARCH_DIRECTIVE else ""
         val resume = conv.claudeSessionId.takeIf { s.ccResume && !it.isNullOrBlank() }
         val prior = conv.messages.dropLast(1).filter { !it.error && it.text.isNotBlank() }
         // If we can't resume a server session but there's history (e.g. earlier turns came from the API),

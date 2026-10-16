@@ -118,13 +118,22 @@ fun parseMarkdown(src: String): List<MdBlock> {
     return out
 }
 
+/** How links in answers open — the app routes them into the built-in browser. */
+val LocalOpenUrl = androidx.compose.runtime.staticCompositionLocalOf<(String) -> Unit> { {} }
+
 private val inlineRe = Regex("""(`[^`]+`)|(\*\*[^*]+\*\*)|(__[^_]+__)|(\*[^*\s][^*]*\*)|(_[^_\s][^_]*_)|(\[[^\]]+]\([^)\s]+\))|(https?://[^\s)]+)""")
 
 @Composable
 fun mdInline(text: String): AnnotatedString {
     val cs = MaterialTheme.colorScheme
     val x = LocalX.current
-    return remember(text, cs.primary) {
+    val open = LocalOpenUrl.current
+    fun link(url: String) = LinkAnnotation.Clickable(
+        tag = url,
+        styles = TextLinkStyles(SpanStyle(color = cs.primary, textDecoration = TextDecoration.Underline)),
+        linkInteractionListener = androidx.compose.ui.text.LinkInteractionListener { open(url) },
+    )
+    return remember(text, cs.primary, open) {
         buildAnnotatedString {
             var last = 0
             for (m in inlineRe.findAll(text)) {
@@ -138,9 +147,9 @@ fun mdInline(text: String): AnnotatedString {
                     t.startsWith("[") -> {
                         val label = t.substringAfter("[").substringBefore("](")
                         val url = t.substringAfter("](").dropLast(1)
-                        withLink(LinkAnnotation.Url(url, TextLinkStyles(SpanStyle(color = cs.primary, textDecoration = TextDecoration.Underline)))) { append(label) }
+                        withLink(link(url)) { append(label) }
                     }
-                    t.startsWith("http") -> withLink(LinkAnnotation.Url(t, TextLinkStyles(SpanStyle(color = cs.primary, textDecoration = TextDecoration.Underline)))) { append(t) }
+                    t.startsWith("http") -> withLink(link(t.trimEnd('.', ',', ';', ':'))) { append(t) }
                     else -> withStyle(SpanStyle(fontStyle = FontStyle.Italic)) { append(t.drop(1).dropLast(1)) }
                 }
                 last = m.range.last + 1

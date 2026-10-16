@@ -5,6 +5,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.currentCoroutineContext
 import kotlinx.coroutines.ensureActive
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.emitAll
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.withContext
@@ -30,8 +31,9 @@ class AnthropicApi {
         .readTimeout(5, TimeUnit.MINUTES)
         .build()
 
-    private fun request(s: AppSettings, apiKey: String, body: JsonObject): Request =
+    private fun request(s: AppSettings, apiKey: String, body: JsonObject, fetch: Boolean = false): Request =
         Request.Builder()
+            .apply { if (fetch) header("anthropic-beta", WEB_FETCH_BETA) }
             .url(s.apiBaseUrl.trimEnd('/') + "/v1/messages")
             .header("x-api-key", apiKey)
             .header("anthropic-version", "2023-06-01")
@@ -40,7 +42,8 @@ class AnthropicApi {
             .build()
 
     /** history: (role, text) pairs, oldest first, must end with a user turn. */
-    fun stream(s: AppSettings, apiKey: String, system: String, history: List<Pair<String, String>>): Flow<Ev> = flow {
+    fun stream(s: AppSettings, apiKey: String, system: String, history: List<Pair<String, String>>, allowFetch: Boolean = true): Flow<Ev> = flow {
+        val useFetch = allowFetch && s.webSearch && s.webResearch && s.fetchPages
         if (apiKey.isBlank()) throw BackendException("No Anthropic API key set (Settings → Anthropic API).", retryable = false)
         val body = buildJsonObject {
             put("model", s.apiModel.trim())
@@ -57,16 +60,28 @@ class AnthropicApi {
                 addJsonObject {
                     put("type", "web_search_20250305")
                     put("name", "web_search")
-                    put("max_uses", 5)
+                    put("max_uses", s.researchDepth.coerceIn(1, 20))
+                }
+                if (useFetch) addJsonObject {
+                    put("type", WEB_FETCH_TOOL)
+                    put("name", "web_fetch")
+                    put("max_uses", s.researchDepth.coerceIn(1, 20))
                 }
             }
         }
         emit(Ev.Backend("API · ${s.apiModel}"))
-        val call = client.newCall(request(s, apiKey, body))
+        val call = client.newCall(request(s, apiKey, body, useFetch))
         val resp = call.execute()
         try {
             if (!resp.isSuccessful) {
                 val err = resp.body?.string().orEmpty()
+                // If this account/model doesn't support the page-reading tool, retry once with search only.
+                if (useFetch && resp.code == 400 && (err.contains("web_fetch") || err.contains("beta") || err.contains("tool"))) {
+                    resp.close()
+                    emit(Ev.Status("Retrying without page fetch…"))
+                    emitAll(stream(s, apiKey, system, history, allowFetch = false))
+                    return@flow
+                }
                 val msg = runCatching {
                     AppJson.parseToJsonElement(err).jsonObject["error"]?.jsonObject?.get("message")?.jsonPrimitive?.contentOrNull
                 }.getOrNull() ?: err.take(300)
@@ -85,8 +100,12 @@ class AnthropicApi {
                     "content_block_start" -> {
                         val block = ev["content_block"]?.jsonObject
                         when (block?.get("type")?.jsonPrimitive?.contentOrNull) {
-                            "server_tool_use" -> emit(Ev.Status("Searching the web…"))
+                            "server_tool_use" -> {
+                                val name = block?.get("name")?.jsonPrimitive?.contentOrNull
+                                emit(Ev.Status(if (name == "web_fetch") "Reading a page…" else "Searching the web…"))
+                            }
                             "web_search_tool_result" -> emit(Ev.Status("Reading search results…"))
+                            "web_fetch_tool_result" -> emit(Ev.Status("Reading page…"))
                             "text" -> blocksWithText++
                         }
                     }
@@ -130,6 +149,9 @@ class AnthropicApi {
     }
 
     companion object {
+        const val WEB_FETCH_TOOL = "web_fetch_20250910"
+        const val WEB_FETCH_BETA = "web-fetch-2025-09-10"
+
         /** API requires alternating roles starting with user. Merge/clean as needed. */
         fun normalize(history: List<Pair<String, String>>): List<Pair<String, String>> {
             val out = ArrayList<Pair<String, String>>()

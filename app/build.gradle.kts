@@ -75,4 +75,5 @@ dependencies {
     implementation(libs.okhttp)
     implementation(libs.jsch)
     implementation(libs.bouncycastle)
+    implementation(libs.coil.compose)
 }

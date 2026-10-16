@@ -56,6 +56,37 @@ When asked for documentation or notes: write clean Markdown with headings, a sum
 Be direct and practical. Prefer free/open-source and phone-friendly options, and say when a paid option is clearly better. If a request is risky (e.g. letting an agent run with bypassPermissions as root on production) explain the risk and give the safer setup (staging, git branch, snapshots, non-root user). If you are not sure a detail is current, say so.
 """.trimIndent()
 
+    val DEFAULT_SOURCES = """
+docs.anthropic.com / docs.claude.com (Claude, Claude Code, API)
+modelcontextprotocol.io (MCP)
+developers.openai.com, platform.openai.com (Codex, OpenAI)
+github.com (READMEs, releases, issues of the actual tools)
+docs.github.com (Git, Actions, Copilot)
+tailscale.com/kb, mosh.org, github.com/tmux/tmux/wiki, wiki.termux.com
+docs.n8n.io, docs.docker.com, nginx.org, caddyserver.com
+digitalocean.com/community/tutorials, hostinger.com/tutorials
+developer.android.com, kotlinlang.org
+ubuntu.com/server/docs, man pages
+roadmap.sh, freecodecamp.org, huggingface.co/learn, deeplearning.ai
+""".trimIndent()
+
+    fun researchBlock(s: AppSettings): String = """
+# Research & sources
+You can search the web${if (s.fetchPages) " and open pages" else ""}. Use it whenever an answer depends on things that change — install commands, versions, flags, pricing, limits, new tools, APIs — or when the user asks you to research. Prefer official docs and these trusted sources:
+${s.preferredSources.lines().filter { it.isNotBlank() }.joinToString("\n") { "- " + it.trim() }}
+Cross-check important claims against a primary source. Cite sources as inline Markdown links and finish researched answers with a short **Sources** list. If search fails, say so and answer from your own knowledge, flagging what may be outdated.
+""".trimIndent()
+
+    val TEACHING = """
+# Teaching & video
+xAI includes a learning suite with a built-in browser and video player; every link you write opens inside the app. When the user is learning something (or asks "how do I…"), end with a **Watch & read** section:
+- 3–5 video links. Use YouTube search links like [Claude Code on a VPS — tutorials](https://www.youtube.com/results?search_query=claude+code+vps+tutorial). Only link a specific video (youtube.com/watch?v=…) if you actually found it via search — never invent video IDs.
+- 2–4 official docs or high-quality written guides.
+Keep teaching hands-on: explain the concept briefly, then give steps to try, then a small exercise.
+""".trimIndent()
+
+    const val RESEARCH_DIRECTIVE = "\n\n[Research mode: search the web thoroughly before answering — check official docs and several current sources, compare them, and cite every source with links.]"
+
     val LEARN_INSTRUCTIONS = """
 # Learning about the user
 You keep a memory of the user's setup (listed above under "What you know about the user's setup"). When the user tells you a NEW durable fact about their environment, tools, servers, projects or preferences that isn't already listed (e.g. "my VPS runs Ubuntu 24.04", "I use Termius"), append ONE line per fact at the very end of your reply in exactly this form:
@@ -76,7 +107,9 @@ Never invent facts, never store passwords, keys, tokens or IP addresses of secre
                 facts.forEach { append("- ").append(it.text).append('\n') }
             }
         }
-        if (s.autoLearn) append('\n').append(LEARN_INSTRUCTIONS)
+        if (s.webResearch) append("\n\n").append(researchBlock(s))
+        append("\n\n").append(TEACHING)
+        if (s.autoLearn) append("\n\n").append(LEARN_INSTRUCTIONS)
     }
 
     private val rememberRe = Regex("""<<\s*remember:\s*(.+?)\s*>>""", RegexOption.IGNORE_CASE)
@@ -95,6 +128,7 @@ Never invent facts, never store passwords, keys, tokens or IP addresses of secre
         "Claude Code vs Codex vs Gemini CLI — which should I use for what?",
         "Write a bash script that hardens a fresh Ubuntu VPS for AI dev",
         "Explain MCP and build me a small MCP server",
+        "Research the newest AI coding agents released this month",
         "Generate a README + setup docs for my project",
         "What should I learn to become an AI software developer?",
     )

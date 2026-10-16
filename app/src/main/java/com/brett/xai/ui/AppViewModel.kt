@@ -31,6 +31,7 @@ data class ChatUi(
 class AppViewModel(app: Application) : AndroidViewModel(app) {
     val store = Store(app)
     val engine = AssistantEngine(store)
+    val learn = com.brett.xai.data.LearnRepo(app)
 
     private val _ui = MutableStateFlow(ChatUi(currentId = store.chats.value.firstOrNull()?.id))
     val ui: StateFlow<ChatUi> = _ui.asStateFlow()
@@ -50,12 +51,12 @@ class AppViewModel(app: Application) : AndroidViewModel(app) {
         if (_ui.value.currentId == id) _ui.update { it.copy(currentId = store.chats.value.firstOrNull()?.id) }
     }
 
-    fun send(text: String, force: BackendMode? = null) {
+    fun send(text: String, force: BackendMode? = null, research: Boolean = false) {
         val t = text.trim()
         if (t.isEmpty() || _ui.value.busy) return
         val existing = store.chat(_ui.value.currentId)
         val base = existing ?: Conversation(title = t.lineSequence().first().take(48))
-        val conv = base.copy(messages = base.messages + ChatMessage(role = "user", text = t), updated = System.currentTimeMillis())
+        val conv = base.copy(messages = base.messages + ChatMessage(role = "user", text = t, research = research), updated = System.currentTimeMillis())
         store.upsertChat(conv)
         _ui.update { it.copy(currentId = conv.id) }
         run(conv, force)
@@ -134,6 +135,19 @@ class AppViewModel(app: Application) : AndroidViewModel(app) {
                 _ui.update { it.copy(busy = false, status = "", streamingId = null) }
             }
         }
+    }
+
+    /** From the built-in browser: start a new chat about the page the user is looking at. */
+    fun askAboutPage(title: String, url: String, pageText: String) {
+        if (_ui.value.busy) { toast("Wait for the current reply to finish"); return }
+        _ui.update { it.copy(currentId = null) }
+        val excerpt = pageText.trim().take(10000)
+        val prompt = buildString {
+            append("I'm reading this page: ").append(title.ifBlank { url }).append("\n").append(url).append("\n\n")
+            append("Explain what it covers, the key steps or commands, and how I'd apply it to my setup. Point out anything outdated or risky.")
+            if (excerpt.isNotBlank()) append("\n\n--- Page text (excerpt) ---\n").append(excerpt)
+        }
+        send(prompt)
     }
 
     fun saveToNotes(text: String, title: String? = null) {

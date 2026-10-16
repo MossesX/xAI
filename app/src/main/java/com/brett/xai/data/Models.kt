@@ -17,6 +17,7 @@ data class ChatMessage(
     val via: String = "",          // which backend produced it
     val note: String = "",         // e.g. "Claude Code unavailable — answered via API"
     val error: Boolean = false,
+    val research: Boolean = false, // user asked for live web research on this message
     val ts: Long = System.currentTimeMillis(),
 )
 
@@ -79,6 +80,16 @@ data class AppSettings(
     val webSearch: Boolean = true,
     val historyLimit: Int = 40,
 
+    // ---- research (live web search + reading pages)
+    val webResearch: Boolean = true,
+    val fetchPages: Boolean = true,
+    val researchDepth: Int = 6,
+    val preferredSources: String = Prompts.DEFAULT_SOURCES,
+
+    // ---- learning suite
+    val openLinksInApp: Boolean = true,
+    val libraryUrl: String = "https://raw.githubusercontent.com/MossesX/xAI/main/app/src/main/assets/curriculum.json",
+
     // ---- assistant brain
     val systemPrompt: String = Prompts.DEFAULT_SYSTEM,
     val useKnowledge: Boolean = true,
@@ -98,4 +109,5 @@ data class Secrets(
     val sshKeyPassphrase: String = "",
     val ccOauthToken: String = "",
     val apiKey: String = "",
+    val youtubeApiKey: String = "",
 )

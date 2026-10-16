@@ -50,6 +50,10 @@ import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material.icons.outlined.Share
 import androidx.compose.material.icons.outlined.Terminal
 import androidx.compose.material.icons.outlined.Cloud
+import androidx.compose.material.icons.outlined.School
+import androidx.compose.material.icons.outlined.Language
+import androidx.compose.material.icons.outlined.TravelExplore
+import androidx.compose.material3.FilterChip
 import androidx.compose.material.icons.outlined.SaveAlt
 import androidx.compose.material.icons.outlined.EditNote
 import androidx.compose.material3.CircularProgressIndicator
@@ -177,6 +181,8 @@ fun ChatScreen(vm: AppViewModel, onNavigate: (String) -> Unit) {
                 }
                 HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant)
                 listOf(
+                    Triple("Learn — tracks, videos, courses", Icons.Outlined.School, "learn"),
+                    Triple("Browser", Icons.Outlined.Language, "browser"),
                     Triple("Notes & docs", Icons.Outlined.EditNote, "notes"),
                     Triple("Knowledge (what I've learned)", Icons.Outlined.Psychology, "knowledge"),
                     Triple("Settings", Icons.Outlined.Settings, "settings"),
@@ -203,6 +209,7 @@ fun ChatScreen(vm: AppViewModel, onNavigate: (String) -> Unit) {
                     },
                     navigationIcon = { IconButton(onClick = { scope.launch { drawer.open() } }) { Icon(Icons.Outlined.Menu, "Menu") } },
                     actions = {
+                        IconButton(onClick = { onNavigate("learn") }) { Icon(Icons.Outlined.School, "Learn") }
                         IconButton(onClick = { vm.newChat() }) { Icon(Icons.Outlined.Add, "New chat") }
                         var menu by remember { mutableStateOf(false) }
                         IconButton(onClick = { menu = true }) { Icon(Icons.Outlined.MoreVert, "More") }
@@ -419,6 +426,7 @@ private fun SmallAction(icon: androidx.compose.ui.graphics.vector.ImageVector, d
 private fun Composer(vm: AppViewModel, busy: Boolean) {
     val shared by vm.pendingInput.collectAsState()
     var text by rememberSaveable { mutableStateOf("") }
+    var research by rememberSaveable { mutableStateOf(false) }
     LaunchedEffect(shared) { if (shared.isNotEmpty()) { text = shared; vm.pendingInput.value = "" } }
     val voice = rememberLauncherForActivityResult(ActivityResultContracts.StartActivityForResult()) { r ->
         if (r.resultCode == Activity.RESULT_OK) {
@@ -427,8 +435,17 @@ private fun Composer(vm: AppViewModel, busy: Boolean) {
         }
     }
     val ctx = LocalContext.current
+    Column(Modifier.fillMaxWidth().navigationBarsPadding()) {
+    Row(Modifier.padding(start = 12.dp, end = 12.dp), verticalAlignment = Alignment.CenterVertically) {
+        FilterChip(
+            selected = research,
+            onClick = { research = !research },
+            label = { Text(if (research) "Deep research on" else "Deep research") },
+            leadingIcon = { Icon(Icons.Outlined.TravelExplore, null, Modifier.size(16.dp)) },
+        )
+    }
     Row(
-        Modifier.fillMaxWidth().navigationBarsPadding().padding(start = 10.dp, end = 10.dp, bottom = 8.dp, top = 4.dp),
+        Modifier.fillMaxWidth().padding(start = 10.dp, end = 10.dp, bottom = 8.dp, top = 2.dp),
         verticalAlignment = Alignment.Bottom,
     ) {
         OutlinedTextField(
@@ -462,7 +479,7 @@ private fun Composer(vm: AppViewModel, busy: Boolean) {
                 .clip(CircleShape)
                 .background(if (enabled) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.surfaceContainerHigh)
                 .clickable(enabled = enabled) {
-                    if (busy) vm.stop() else { vm.send(text); text = "" }
+                    if (busy) vm.stop() else { vm.send(text, research = research); text = "" }
                 },
             contentAlignment = Alignment.Center,
         ) {
@@ -472,5 +489,5 @@ private fun Composer(vm: AppViewModel, busy: Boolean) {
                 tint = if (enabled) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurfaceVariant,
             )
         }
-    }
+    }}
 }

@@ -1,0 +1,3391 @@
+{
+ "version": 1,
+ "tracks": [
+  {
+   "id": "start",
+   "title": "Start here: AI dev foundations",
+   "icon": "rocket",
+   "color": "#5EEAD4",
+   "summary": "What AI-assisted software development is, the vocabulary, and a roadmap for learning it.",
+   "topics": [
+    {
+     "id": "start-how-llms-work-for-builders",
+     "title": "How LLMs work (for builders)",
+     "level": "Beginner",
+     "summary": "Tokens, context windows, sampling and why models hallucinate — just enough theory to build well.",
+     "videos": [
+      "how large language models work explained",
+      "LLM tokens context window explained",
+      "intro to large language models karpathy"
+     ],
+     "docs": [
+      {
+       "title": "Karpathy: Neural Networks Zero to Hero",
+       "url": "https://karpathy.ai/zero-to-hero.html"
+      },
+      {
+       "title": "Hugging Face Learn",
+       "url": "https://huggingface.co/learn"
+      }
+     ]
+    },
+    {
+     "id": "start-prompting-that-actually-works",
+     "title": "Prompting that actually works",
+     "level": "Beginner",
+     "summary": "Clear instructions, examples, XML tags, roles and iterating on prompts.",
+     "videos": [
+      "prompt engineering tutorial claude",
+      "anthropic prompt engineering interactive tutorial",
+      "prompt engineering best practices 2026"
+     ],
+     "docs": [
+      {
+       "title": "Prompt engineering guide",
+       "url": "https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview"
+      },
+      {
+       "title": "Anthropic courses (GitHub)",
+       "url": "https://github.com/anthropics/courses"
+      }
+     ]
+    },
+    {
+     "id": "start-chatbots-vs-agents-vs-coding-agents",
+     "title": "Chatbots vs agents vs coding agents",
+     "level": "Beginner",
+     "summary": "The difference between a chat, a tool-using agent, and an autonomous coding agent working in your repo.",
+     "videos": [
+      "what is an AI agent explained",
+      "how AI coding agents work",
+      "agentic coding explained"
+     ],
+     "docs": [
+      {
+       "title": "Claude Code docs",
+       "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
+      },
+      {
+       "title": "roadmap.sh AI Engineer",
+       "url": "https://roadmap.sh/ai-engineer"
+      }
+     ]
+    },
+    {
+     "id": "start-choosing-a-model",
+     "title": "Choosing a model",
+     "level": "Beginner",
+     "summary": "Frontier vs small vs local models, speed vs cost vs quality, and when each makes sense.",
+     "videos": [
+      "which LLM should I use for coding",
+      "claude vs gpt vs gemini for coding comparison",
+      "best AI model for programming"
+     ],
+     "docs": [
+      {
+       "title": "Claude API docs",
+       "url": "https://docs.claude.com/en/api/overview"
+      },
+      {
+       "title": "OpenRouter docs",
+       "url": "https://openrouter.ai/docs"
+      }
+     ]
+    },
+    {
+     "id": "start-subscription-vs-api-billing",
+     "title": "Subscription vs API billing",
+     "level": "Beginner",
+     "summary": "Claude/ChatGPT plans vs pay-as-you-go API keys, usage limits, and how coding agents bill.",
+     "videos": [
+      "claude code subscription vs api cost",
+      "claude max plan claude code usage limits",
+      "AI API pricing explained tokens"
+     ],
+     "docs": [
+      {
+       "title": "Claude Code docs",
+       "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
+      },
+      {
+       "title": "Claude API docs",
+       "url": "https://docs.claude.com/en/api/overview"
+      }
+     ]
+    },
+    {
+     "id": "start-the-ai-engineer-roadmap",
+     "title": "The AI engineer roadmap",
+     "level": "Beginner",
+     "summary": "What to learn, in what order, to go from zero to shipping AI-built software.",
+     "videos": [
+      "AI engineer roadmap",
+      "how to become an AI engineer",
+      "learn AI software development roadmap"
+     ],
+     "docs": [
+      {
+       "title": "roadmap.sh AI Engineer",
+       "url": "https://roadmap.sh/ai-engineer"
+      },
+      {
+       "title": "DeepLearning.AI short courses",
+       "url": "https://www.deeplearning.ai/short-courses/"
+      }
+     ]
+    },
+    {
+     "id": "start-vibe-coding-vs-engineering",
+     "title": "Vibe coding vs engineering",
+     "level": "Beginner",
+     "summary": "Getting the speed of AI without the mess: specs, reviews, tests and version control.",
+     "videos": [
+      "vibe coding tips",
+      "vibe coding vs software engineering",
+      "how to code with AI properly"
+     ],
+     "docs": [
+      {
+       "title": "Claude Code docs",
+       "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
+      },
+      {
+       "title": "Pro Git book",
+       "url": "https://git-scm.com/book/en/v2"
+      }
+     ]
+    },
+    {
+     "id": "start-reading-ai-written-code",
+     "title": "Reading AI-written code",
+     "level": "Intermediate",
+     "summary": "How to review, understand and safely accept code an agent wrote.",
+     "videos": [
+      "how to review AI generated code",
+      "code review AI generated pull requests",
+      "understanding code written by AI"
+     ],
+     "docs": [
+      {
+       "title": "GitHub docs",
+       "url": "https://docs.github.com"
+      }
+     ]
+    },
+    {
+     "id": "start-context-engineering",
+     "title": "Context engineering",
+     "level": "Intermediate",
+     "summary": "Feeding agents the right files, docs and memory — CLAUDE.md, rules files, specs.",
+     "videos": [
+      "context engineering AI agents",
+      "context engineering claude code",
+      "spec driven development AI"
+     ],
+     "docs": [
+      {
+       "title": "Claude Code docs",
+       "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
+      },
+      {
+       "title": "Prompt engineering guide",
+       "url": "https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview"
+      }
+     ]
+    },
+    {
+     "id": "start-evaluating-ai-output",
+     "title": "Evaluating AI output",
+     "level": "Intermediate",
+     "summary": "Simple evals and checks so you know if prompts and agents are getting better or worse.",
+     "videos": [
+      "LLM evals tutorial",
+      "how to evaluate llm applications",
+      "prompt evaluation beginner"
+     ],
+     "docs": [
+      {
+       "title": "Langfuse docs",
+       "url": "https://langfuse.com/docs"
+      },
+      {
+       "title": "Anthropic courses (GitHub)",
+       "url": "https://github.com/anthropics/courses"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "claudecode",
+   "title": "Claude Code mastery",
+   "icon": "terminal",
+   "color": "#FBBF24",
+   "summary": "Everything about Anthropic's coding agent: install, workflow, extensions and running it headless on servers.",
+   "topics": [
+    {
+     "id": "claudecode-install-first-run",
+     "title": "Install & first run",
+     "level": "Beginner",
+     "summary": "Installing Claude Code, logging in with your plan, and your first session in a repo.",
+     "videos": [
+      "claude code tutorial for beginners",
+      "claude code install setup",
+      "claude code getting started"
+     ],
+     "docs": [
+      {
+       "title": "Claude Code quickstart",
+       "url": "https://docs.anthropic.com/en/docs/claude-code/quickstart"
+      },
+      {
+       "title": "Claude Code docs",
+       "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
+      }
+     ]
+    },
+    {
+     "id": "claudecode-claude-md-memory",
+     "title": "CLAUDE.md & memory",
+     "level": "Beginner",
+     "summary": "Project and user memory files that teach Claude your codebase and rules.",
+     "videos": [
+      "claude.md file claude code",
+      "claude code memory claude.md best practices",
+      "claude code project instructions"
+     ],
+     "docs": [
+      {
+       "title": "Claude Code docs",
+       "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
+      }
+     ]
+    },
+    {
+     "id": "claudecode-slash-commands-custom-commands",
+     "title": "Slash commands & custom commands",
+     "level": "Beginner",
+     "summary": "Built-in commands and writing your own reusable commands.",
+     "videos": [
+      "claude code slash commands",
+      "claude code custom slash commands",
+      "claude code commands tutorial"
+     ],
+     "docs": [
+      {
+       "title": "Claude Code docs",
+       "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
+      }
+     ]
+    },
+    {
+     "id": "claudecode-permission-modes-safety",
+     "title": "Permission modes & safety",
+     "level": "Intermediate",
+     "summary": "default, plan, acceptEdits and bypassPermissions — when to use each, allowlists and sandboxing.",
+     "videos": [
+      "claude code permissions",
+      "claude code plan mode",
+      "claude code dangerously skip permissions safely"
+     ],
+     "docs": [
+      {
+       "title": "Claude Code docs",
+       "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
+      }
+     ]
+    },
+    {
+     "id": "claudecode-hooks",
+     "title": "Hooks",
+     "level": "Intermediate",
+     "summary": "Run your own scripts on tool calls, edits, stops and prompts — formatters, guards, notifications.",
+     "videos": [
+      "claude code hooks tutorial",
+      "claude code hooks examples",
+      "claude code hooks automation"
+     ],
+     "docs": [
+      {
+       "title": "Claude Code docs",
+       "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
+      }
+     ]
+    },
+    {
+     "id": "claudecode-subagents",
+     "title": "Subagents",
+     "level": "Intermediate",
+     "summary": "Specialised helper agents with their own context and tools.",
+     "videos": [
+      "claude code subagents",
+      "claude code sub agents tutorial",
+      "claude code agents workflow"
+     ],
+     "docs": [
+      {
+       "title": "Claude Code docs",
+       "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
+      }
+     ]
+    },
+    {
+     "id": "claudecode-skills-plugins",
+     "title": "Skills & plugins",
+     "level": "Intermediate",
+     "summary": "Packaging know-how as skills, and installing/sharing plugins and marketplaces.",
+     "videos": [
+      "claude code skills",
+      "claude agent skills tutorial",
+      "claude code plugins marketplace"
+     ],
+     "docs": [
+      {
+       "title": "Claude Code docs",
+       "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
+      }
+     ]
+    },
+    {
+     "id": "claudecode-mcp-servers-in-claude-code",
+     "title": "MCP servers in Claude Code",
+     "level": "Intermediate",
+     "summary": "Connecting Claude Code to databases, browsers, GitHub and APIs via MCP.",
+     "videos": [
+      "claude code mcp servers",
+      "best mcp servers claude code",
+      "add mcp server claude code"
+     ],
+     "docs": [
+      {
+       "title": "Claude Code docs",
+       "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
+      },
+      {
+       "title": "Model Context Protocol",
+       "url": "https://modelcontextprotocol.io"
+      }
+     ]
+    },
+    {
+     "id": "claudecode-headless-mode-scripting-claude-p",
+     "title": "Headless mode & scripting (claude -p)",
+     "level": "Advanced",
+     "summary": "Running Claude Code non-interactively: print mode, JSON/stream-JSON output, resume, CI usage.",
+     "videos": [
+      "claude code headless mode",
+      "claude code -p print mode automation",
+      "claude code sdk headless"
+     ],
+     "docs": [
+      {
+       "title": "Claude Code docs",
+       "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
+      }
+     ]
+    },
+    {
+     "id": "claudecode-claude-code-in-github-actions",
+     "title": "Claude Code in GitHub Actions",
+     "level": "Advanced",
+     "summary": "Let Claude respond to issues and PRs, review code and open PRs automatically.",
+     "videos": [
+      "claude code github actions",
+      "claude code github integration pr review",
+      "@claude github action"
+     ],
+     "docs": [
+      {
+       "title": "Claude Code docs",
+       "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
+      },
+      {
+       "title": "GitHub Actions docs",
+       "url": "https://docs.github.com/en/actions"
+      }
+     ]
+    },
+    {
+     "id": "claudecode-claude-code-on-a-vps",
+     "title": "Claude Code on a VPS",
+     "level": "Advanced",
+     "summary": "Install on a server, log in headless with setup-token, run in tmux, reach it from your phone.",
+     "videos": [
+      "claude code on vps server",
+      "claude code remote server ssh",
+      "claude code running on cloud server phone"
+     ],
+     "docs": [
+      {
+       "title": "Claude Code docs",
+       "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
+      },
+      {
+       "title": "Hostinger VPS tutorials",
+       "url": "https://www.hostinger.com/tutorials/vps"
+      }
+     ]
+    },
+    {
+     "id": "claudecode-claude-code-on-web-mobile",
+     "title": "Claude Code on web & mobile",
+     "level": "Intermediate",
+     "summary": "Cloud sessions from the browser and phone, handing sessions between devices.",
+     "videos": [
+      "claude code on the web",
+      "claude code mobile app",
+      "claude code phone"
+     ],
+     "docs": [
+      {
+       "title": "Claude Code docs",
+       "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
+      }
+     ]
+    },
+    {
+     "id": "claudecode-workflows-that-ship",
+     "title": "Workflows that ship",
+     "level": "Intermediate",
+     "summary": "Plan → implement → test → commit loops, TDD with agents, parallel worktrees.",
+     "videos": [
+      "claude code workflow best practices",
+      "claude code tips and tricks",
+      "claude code git worktrees parallel"
+     ],
+     "docs": [
+      {
+       "title": "Claude Code docs",
+       "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
+      }
+     ]
+    },
+    {
+     "id": "claudecode-costs-limits-usage",
+     "title": "Costs, limits & usage",
+     "level": "Beginner",
+     "summary": "Understanding usage limits, /cost and /usage, picking models to stretch your plan.",
+     "videos": [
+      "claude code usage limits",
+      "claude code cost tips",
+      "claude code opus vs sonnet"
+     ],
+     "docs": [
+      {
+       "title": "Claude Code docs",
+       "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
+      }
+     ]
+    },
+    {
+     "id": "claudecode-claude-agent-sdk",
+     "title": "Claude Agent SDK",
+     "level": "Advanced",
+     "summary": "Building your own agents on the same harness that powers Claude Code.",
+     "videos": [
+      "claude agent sdk tutorial",
+      "claude agent sdk python typescript",
+      "build agent with claude agent sdk"
+     ],
+     "docs": [
+      {
+       "title": "Claude API docs",
+       "url": "https://docs.claude.com/en/api/overview"
+      },
+      {
+       "title": "Claude cookbooks",
+       "url": "https://github.com/anthropics/anthropic-cookbook"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "agents",
+   "title": "Other coding agents & AI IDEs",
+   "icon": "smart_toy",
+   "color": "#A78BFA",
+   "summary": "Codex, Gemini CLI, Copilot, Cursor, Cline, Aider and friends — strengths, setup and when to pick which.",
+   "topics": [
+    {
+     "id": "agents-openai-codex-cli",
+     "title": "OpenAI Codex CLI",
+     "level": "Beginner",
+     "summary": "Install, sandbox modes, AGENTS.md, and using Codex with your ChatGPT plan.",
+     "videos": [
+      "openai codex cli tutorial",
+      "codex cli setup",
+      "codex agents.md"
+     ],
+     "docs": [
+      {
+       "title": "OpenAI Codex docs",
+       "url": "https://developers.openai.com/codex"
+      },
+      {
+       "title": "Codex CLI on GitHub",
+       "url": "https://github.com/openai/codex"
+      }
+     ]
+    },
+    {
+     "id": "agents-codex-cloud-ide-extension",
+     "title": "Codex cloud & IDE extension",
+     "level": "Intermediate",
+     "summary": "Delegating tasks to cloud Codex and reviewing the results as PRs.",
+     "videos": [
+      "openai codex cloud tasks",
+      "codex vs code extension",
+      "codex github pull requests"
+     ],
+     "docs": [
+      {
+       "title": "OpenAI Codex docs",
+       "url": "https://developers.openai.com/codex"
+      }
+     ]
+    },
+    {
+     "id": "agents-gemini-cli",
+     "title": "Gemini CLI",
+     "level": "Beginner",
+     "summary": "Google's open-source terminal agent, free tier, extensions and MCP.",
+     "videos": [
+      "gemini cli tutorial",
+      "gemini cli setup",
+      "gemini cli vs claude code"
+     ],
+     "docs": [
+      {
+       "title": "Gemini CLI on GitHub",
+       "url": "https://github.com/google-gemini/gemini-cli"
+      }
+     ]
+    },
+    {
+     "id": "agents-github-copilot-agent-mode-coding-agent",
+     "title": "GitHub Copilot agent mode & coding agent",
+     "level": "Beginner",
+     "summary": "Copilot in VS Code agent mode, and assigning issues to the Copilot coding agent.",
+     "videos": [
+      "github copilot agent mode",
+      "github copilot coding agent assign issue",
+      "copilot tutorial 2026"
+     ],
+     "docs": [
+      {
+       "title": "GitHub Copilot docs",
+       "url": "https://docs.github.com/en/copilot"
+      }
+     ]
+    },
+    {
+     "id": "agents-cursor",
+     "title": "Cursor",
+     "level": "Beginner",
+     "summary": "AI-first editor: agent, rules, background agents and model choice.",
+     "videos": [
+      "cursor ai tutorial",
+      "cursor rules tutorial",
+      "cursor agent mode"
+     ],
+     "docs": [
+      {
+       "title": "Cursor docs",
+       "url": "https://docs.cursor.com"
+      }
+     ]
+    },
+    {
+     "id": "agents-windsurf",
+     "title": "Windsurf",
+     "level": "Beginner",
+     "summary": "Cascade agent, flows and how it compares.",
+     "videos": [
+      "windsurf editor tutorial",
+      "windsurf cascade",
+      "windsurf vs cursor"
+     ],
+     "docs": []
+    },
+    {
+     "id": "agents-cline-roo-code-kilo-code",
+     "title": "Cline, Roo Code & Kilo Code",
+     "level": "Intermediate",
+     "summary": "Open-source VS Code agents with bring-your-own-key and MCP.",
+     "videos": [
+      "cline vs code tutorial",
+      "roo code tutorial",
+      "kilo code tutorial"
+     ],
+     "docs": [
+      {
+       "title": "Cline on GitHub",
+       "url": "https://github.com/cline/cline"
+      }
+     ]
+    },
+    {
+     "id": "agents-aider",
+     "title": "Aider",
+     "level": "Intermediate",
+     "summary": "Git-native pair programmer in your terminal with any model.",
+     "videos": [
+      "aider ai tutorial",
+      "aider chat coding",
+      "aider with claude"
+     ],
+     "docs": [
+      {
+       "title": "Aider",
+       "url": "https://aider.chat"
+      }
+     ]
+    },
+    {
+     "id": "agents-opencode-goose-amp",
+     "title": "OpenCode, Goose & Amp",
+     "level": "Intermediate",
+     "summary": "Other terminal agents and when they're worth a look.",
+     "videos": [
+      "opencode terminal ai agent",
+      "goose ai agent block",
+      "amp code agent sourcegraph"
+     ],
+     "docs": [
+      {
+       "title": "OpenCode",
+       "url": "https://opencode.ai"
+      },
+      {
+       "title": "Goose on GitHub",
+       "url": "https://github.com/block/goose"
+      }
+     ]
+    },
+    {
+     "id": "agents-autonomous-agents-devin-jules-others",
+     "title": "Autonomous agents: Devin, Jules & others",
+     "level": "Intermediate",
+     "summary": "Fully async agents that work on tickets — where they help and where they don't.",
+     "videos": [
+      "devin ai software engineer review",
+      "google jules coding agent",
+      "autonomous coding agents comparison"
+     ],
+     "docs": []
+    },
+    {
+     "id": "agents-app-builders-bolt-lovable-v0-replit",
+     "title": "App builders: Bolt, Lovable, v0, Replit",
+     "level": "Beginner",
+     "summary": "Prompt-to-app builders and how to graduate their output to a real repo.",
+     "videos": [
+      "lovable tutorial",
+      "bolt new tutorial",
+      "v0 vercel tutorial",
+      "replit agent tutorial"
+     ],
+     "docs": []
+    },
+    {
+     "id": "agents-picking-the-right-agent",
+     "title": "Picking the right agent",
+     "level": "Beginner",
+     "summary": "A practical comparison and a combo that works from a phone.",
+     "videos": [
+      "claude code vs codex vs gemini cli",
+      "best ai coding agent 2026",
+      "ai coding tools comparison"
+     ],
+     "docs": [
+      {
+       "title": "Claude Code docs",
+       "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
+      },
+      {
+       "title": "OpenAI Codex docs",
+       "url": "https://developers.openai.com/codex"
+      },
+      {
+       "title": "Gemini CLI on GitHub",
+       "url": "https://github.com/google-gemini/gemini-cli"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phone",
+   "title": "Develop from your phone",
+   "icon": "smartphone",
+   "color": "#F472B6",
+   "summary": "Turning an Android phone into a real dev machine: terminals, persistent sessions, keyboards and workflows.",
+   "topics": [
+    {
+     "id": "phone-termux-basics",
+     "title": "Termux basics",
+     "level": "Beginner",
+     "summary": "A full Linux environment on Android: packages, storage, git, ssh, python, node.",
+     "videos": [
+      "termux tutorial for beginners",
+      "termux setup development",
+      "termux ssh git"
+     ],
+     "docs": [
+      {
+       "title": "Termux wiki",
+       "url": "https://wiki.termux.com"
+      },
+      {
+       "title": "Termux app on GitHub",
+       "url": "https://github.com/termux/termux-app"
+      }
+     ]
+    },
+    {
+     "id": "phone-ssh-apps-termius-juicessh-connectbot",
+     "title": "SSH apps: Termius, JuiceSSH, ConnectBot",
+     "level": "Beginner",
+     "summary": "Picking an SSH client, saving hosts, key auth and snippets.",
+     "videos": [
+      "termius tutorial android",
+      "juicessh tutorial",
+      "best ssh app android"
+     ],
+     "docs": [
+      {
+       "title": "SSH Academy",
+       "url": "https://www.ssh.com/academy/ssh"
+      }
+     ]
+    },
+    {
+     "id": "phone-ssh-keys-on-android",
+     "title": "SSH keys on Android",
+     "level": "Beginner",
+     "summary": "Generating ed25519 keys on the phone and installing them on servers.",
+     "videos": [
+      "generate ssh key android termux",
+      "termius ssh key setup",
+      "ssh key authentication tutorial"
+     ],
+     "docs": [
+      {
+       "title": "SSH Academy",
+       "url": "https://www.ssh.com/academy/ssh"
+      },
+      {
+       "title": "DigitalOcean tutorials",
+       "url": "https://www.digitalocean.com/community/tutorials"
+      }
+     ]
+    },
+    {
+     "id": "phone-mosh-a-terminal-that-never-drops",
+     "title": "Mosh: a terminal that never drops",
+     "level": "Intermediate",
+     "summary": "Roaming SSH over flaky mobile data; setup on server and phone.",
+     "videos": [
+      "mosh shell tutorial",
+      "mosh vs ssh",
+      "mosh termux"
+     ],
+     "docs": [
+      {
+       "title": "Mosh",
+       "url": "https://mosh.org"
+      }
+     ]
+    },
+    {
+     "id": "phone-tmux-sessions-that-survive",
+     "title": "tmux: sessions that survive",
+     "level": "Beginner",
+     "summary": "Keep Claude Code and servers running when you disconnect; panes, windows, attach/detach.",
+     "videos": [
+      "tmux tutorial for beginners",
+      "tmux crash course",
+      "tmux claude code"
+     ],
+     "docs": [
+      {
+       "title": "tmux wiki",
+       "url": "https://github.com/tmux/tmux/wiki"
+      }
+     ]
+    },
+    {
+     "id": "phone-zellij",
+     "title": "Zellij",
+     "level": "Intermediate",
+     "summary": "A friendlier terminal multiplexer with layouts and floating panes.",
+     "videos": [
+      "zellij tutorial",
+      "zellij vs tmux",
+      "zellij terminal workspace"
+     ],
+     "docs": [
+      {
+       "title": "Zellij docs",
+       "url": "https://zellij.dev/documentation/"
+      }
+     ]
+    },
+    {
+     "id": "phone-claude-code-from-your-phone",
+     "title": "Claude Code from your phone",
+     "level": "Intermediate",
+     "summary": "Phone → Tailscale → VPS → tmux → Claude Code, and the Claude app's cloud sessions.",
+     "videos": [
+      "claude code on phone",
+      "claude code mobile ssh tmux",
+      "code from phone with ai agent"
+     ],
+     "docs": [
+      {
+       "title": "Claude Code docs",
+       "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
+      },
+      {
+       "title": "Tailscale knowledge base",
+       "url": "https://tailscale.com/kb"
+      },
+      {
+       "title": "Mosh",
+       "url": "https://mosh.org"
+      }
+     ]
+    },
+    {
+     "id": "phone-vs-code-in-the-browser-code-server",
+     "title": "VS Code in the browser (code-server)",
+     "level": "Intermediate",
+     "summary": "Run VS Code on your VPS and use it from the phone's browser.",
+     "videos": [
+      "code-server tutorial",
+      "vs code in browser self hosted",
+      "code-server on vps"
+     ],
+     "docs": [
+      {
+       "title": "code-server docs",
+       "url": "https://coder.com/docs/code-server"
+      }
+     ]
+    },
+    {
+     "id": "phone-keyboards-dex-setups",
+     "title": "Keyboards & DeX setups",
+     "level": "Beginner",
+     "summary": "Dev-friendly keyboards, Bluetooth keyboards, Samsung DeX and external monitors.",
+     "videos": [
+      "samsung dex programming",
+      "coding on android tablet setup",
+      "best keyboard for coding on android"
+     ],
+     "docs": []
+    },
+    {
+     "id": "phone-voice-coding-dictation",
+     "title": "Voice coding & dictation",
+     "level": "Beginner",
+     "summary": "Driving agents by voice and dictating specs.",
+     "videos": [
+      "voice coding with ai",
+      "talk to claude code voice",
+      "voice dictation programming"
+     ],
+     "docs": []
+    },
+    {
+     "id": "phone-github-from-mobile",
+     "title": "GitHub from mobile",
+     "level": "Beginner",
+     "summary": "Reviewing PRs, merging, Actions and releases from the GitHub app.",
+     "videos": [
+      "github mobile app tutorial",
+      "manage github from phone",
+      "github actions from mobile"
+     ],
+     "docs": [
+      {
+       "title": "GitHub docs",
+       "url": "https://docs.github.com"
+      }
+     ]
+    },
+    {
+     "id": "phone-building-android-apps-without-a-pc",
+     "title": "Building Android apps without a PC",
+     "level": "Intermediate",
+     "summary": "Write with an agent, build APKs in GitHub Actions, install from Releases.",
+     "videos": [
+      "build android app on phone",
+      "github actions build apk",
+      "android development without pc"
+     ],
+     "docs": [
+      {
+       "title": "GitHub Actions docs",
+       "url": "https://docs.github.com/en/actions"
+      },
+      {
+       "title": "Gradle user manual",
+       "url": "https://docs.gradle.org/current/userguide/userguide.html"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "network",
+   "title": "Networking & remote access",
+   "icon": "hub",
+   "color": "#60A5FA",
+   "summary": "SSH deeply, private networks and tunnels — how your phone reaches your servers safely.",
+   "topics": [
+    {
+     "id": "network-ssh-from-zero",
+     "title": "SSH from zero",
+     "level": "Beginner",
+     "summary": "How SSH works, host keys, users, and connecting the first time.",
+     "videos": [
+      "ssh tutorial for beginners",
+      "how ssh works",
+      "ssh crash course"
+     ],
+     "docs": [
+      {
+       "title": "SSH Academy",
+       "url": "https://www.ssh.com/academy/ssh"
+      },
+      {
+       "title": "DigitalOcean tutorials",
+       "url": "https://www.digitalocean.com/community/tutorials"
+      }
+     ]
+    },
+    {
+     "id": "network-ssh-config-agents-jump-hosts",
+     "title": "~/.ssh/config, agents & jump hosts",
+     "level": "Intermediate",
+     "summary": "Aliases, ssh-agent, ProxyJump and per-host keys.",
+     "videos": [
+      "ssh config file tutorial",
+      "ssh proxyjump",
+      "ssh agent forwarding explained"
+     ],
+     "docs": [
+      {
+       "title": "SSH Academy",
+       "url": "https://www.ssh.com/academy/ssh"
+      }
+     ]
+    },
+    {
+     "id": "network-port-forwarding-socks",
+     "title": "Port forwarding & SOCKS",
+     "level": "Intermediate",
+     "summary": "-L, -R and -D tunnels to reach private dashboards and databases.",
+     "videos": [
+      "ssh port forwarding explained",
+      "ssh tunnel tutorial",
+      "ssh reverse tunnel"
+     ],
+     "docs": [
+      {
+       "title": "SSH Academy",
+       "url": "https://www.ssh.com/academy/ssh"
+      }
+     ]
+    },
+    {
+     "id": "network-tailscale",
+     "title": "Tailscale",
+     "level": "Beginner",
+     "summary": "Private mesh network for your phone, PC and VPS in minutes; MagicDNS and ACLs.",
+     "videos": [
+      "tailscale tutorial",
+      "tailscale setup vps",
+      "tailscale explained"
+     ],
+     "docs": [
+      {
+       "title": "Tailscale knowledge base",
+       "url": "https://tailscale.com/kb"
+      }
+     ]
+    },
+    {
+     "id": "network-tailscale-ssh-serve-funnel",
+     "title": "Tailscale SSH, Serve & Funnel",
+     "level": "Intermediate",
+     "summary": "SSH without keys or open ports, and sharing services privately or publicly.",
+     "videos": [
+      "tailscale ssh",
+      "tailscale serve funnel",
+      "tailscale funnel tutorial"
+     ],
+     "docs": [
+      {
+       "title": "Tailscale knowledge base",
+       "url": "https://tailscale.com/kb"
+      }
+     ]
+    },
+    {
+     "id": "network-headscale-self-hosted-control-server",
+     "title": "Headscale (self-hosted control server)",
+     "level": "Advanced",
+     "summary": "Run your own Tailscale-compatible coordination server.",
+     "videos": [
+      "headscale tutorial",
+      "headscale setup",
+      "self host tailscale headscale"
+     ],
+     "docs": [
+      {
+       "title": "Headscale on GitHub",
+       "url": "https://github.com/juanfont/headscale"
+      }
+     ]
+    },
+    {
+     "id": "network-wireguard",
+     "title": "WireGuard",
+     "level": "Intermediate",
+     "summary": "Fast VPN tunnels you configure yourself.",
+     "videos": [
+      "wireguard tutorial",
+      "wireguard vps setup",
+      "wireguard explained"
+     ],
+     "docs": [
+      {
+       "title": "WireGuard quick start",
+       "url": "https://www.wireguard.com/quickstart/"
+      }
+     ]
+    },
+    {
+     "id": "network-zerotier",
+     "title": "ZeroTier",
+     "level": "Beginner",
+     "summary": "Another easy virtual LAN option.",
+     "videos": [
+      "zerotier tutorial",
+      "zerotier vs tailscale"
+     ],
+     "docs": [
+      {
+       "title": "ZeroTier docs",
+       "url": "https://docs.zerotier.com"
+      }
+     ]
+    },
+    {
+     "id": "network-cloudflare-tunnel",
+     "title": "Cloudflare Tunnel",
+     "level": "Intermediate",
+     "summary": "Expose a server's apps on your domain without opening ports.",
+     "videos": [
+      "cloudflare tunnel tutorial",
+      "cloudflared tunnel setup",
+      "cloudflare zero trust access tutorial"
+     ],
+     "docs": [
+      {
+       "title": "Cloudflare Tunnel docs",
+       "url": "https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/"
+      }
+     ]
+    },
+    {
+     "id": "network-ngrok-quick-tunnels",
+     "title": "ngrok & quick tunnels",
+     "level": "Beginner",
+     "summary": "Share a local server or webhook endpoint in seconds.",
+     "videos": [
+      "ngrok tutorial",
+      "ngrok webhook testing",
+      "ngrok alternatives"
+     ],
+     "docs": [
+      {
+       "title": "ngrok docs",
+       "url": "https://ngrok.com/docs"
+      }
+     ]
+    },
+    {
+     "id": "network-dns-domains-subdomains",
+     "title": "DNS, domains & subdomains",
+     "level": "Beginner",
+     "summary": "A/AAAA/CNAME records, TTL, pointing subdomains at a VPS.",
+     "videos": [
+      "dns explained",
+      "how to point domain to vps",
+      "subdomain dns setup"
+     ],
+     "docs": [
+      {
+       "title": "Cloudflare: What is DNS",
+       "url": "https://www.cloudflare.com/learning/dns/what-is-dns/"
+      },
+      {
+       "title": "Hostinger VPS tutorials",
+       "url": "https://www.hostinger.com/tutorials/vps"
+      }
+     ]
+    },
+    {
+     "id": "network-eternal-terminal-autossh",
+     "title": "Eternal Terminal & autossh",
+     "level": "Intermediate",
+     "summary": "Other ways to keep long-lived remote sessions alive.",
+     "videos": [
+      "eternal terminal et",
+      "autossh tutorial"
+     ],
+     "docs": [
+      {
+       "title": "Eternal Terminal",
+       "url": "https://eternalterminal.dev"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vps",
+   "title": "VPS & Linux servers",
+   "icon": "dns",
+   "color": "#34D399",
+   "summary": "Running your own server: setup, hardening, web servers, SSL, processes, backups and monitoring.",
+   "topics": [
+    {
+     "id": "vps-choosing-a-vps",
+     "title": "Choosing a VPS",
+     "level": "Beginner",
+     "summary": "Hostinger, Hetzner, DigitalOcean, Lightsail — specs you actually need for AI dev.",
+     "videos": [
+      "best vps for developers",
+      "vps for beginners",
+      "hostinger vps review"
+     ],
+     "docs": [
+      {
+       "title": "Hostinger VPS tutorials",
+       "url": "https://www.hostinger.com/tutorials/vps"
+      },
+      {
+       "title": "DigitalOcean tutorials",
+       "url": "https://www.digitalocean.com/community/tutorials"
+      }
+     ]
+    },
+    {
+     "id": "vps-first-30-minutes-on-a-new-vps",
+     "title": "First 30 minutes on a new VPS",
+     "level": "Beginner",
+     "summary": "Updates, a sudo user, SSH keys, firewall and timezone.",
+     "videos": [
+      "initial server setup ubuntu",
+      "new vps setup checklist",
+      "secure new linux server"
+     ],
+     "docs": [
+      {
+       "title": "DigitalOcean tutorials",
+       "url": "https://www.digitalocean.com/community/tutorials"
+      },
+      {
+       "title": "Ubuntu Server docs",
+       "url": "https://ubuntu.com/server/docs"
+      }
+     ]
+    },
+    {
+     "id": "vps-linux-users-sudo-permissions",
+     "title": "Linux users, sudo & permissions",
+     "level": "Beginner",
+     "summary": "Users, groups, chmod/chown and why agents shouldn't run as root.",
+     "videos": [
+      "linux permissions explained",
+      "linux users and groups tutorial",
+      "sudo explained"
+     ],
+     "docs": [
+      {
+       "title": "Linux Journey",
+       "url": "https://linuxjourney.com"
+      }
+     ]
+    },
+    {
+     "id": "vps-hardening-ufw-fail2ban-ssh",
+     "title": "Hardening: ufw, fail2ban, SSH",
+     "level": "Intermediate",
+     "summary": "Lock down SSH, firewall rules and ban brute-forcers.",
+     "videos": [
+      "ufw firewall tutorial",
+      "fail2ban tutorial",
+      "harden ssh server"
+     ],
+     "docs": [
+      {
+       "title": "UFW (Ubuntu)",
+       "url": "https://help.ubuntu.com/community/UFW"
+      },
+      {
+       "title": "fail2ban on GitHub",
+       "url": "https://github.com/fail2ban/fail2ban"
+      }
+     ]
+    },
+    {
+     "id": "vps-systemd-services-logs",
+     "title": "systemd services & logs",
+     "level": "Intermediate",
+     "summary": "Run apps as services, auto-restart, journalctl.",
+     "videos": [
+      "systemd service tutorial",
+      "journalctl tutorial",
+      "create systemd service"
+     ],
+     "docs": [
+      {
+       "title": "systemd.service manual",
+       "url": "https://www.freedesktop.org/software/systemd/man/latest/systemd.service.html"
+      }
+     ]
+    },
+    {
+     "id": "vps-nginx-reverse-proxy",
+     "title": "Nginx reverse proxy",
+     "level": "Intermediate",
+     "summary": "Serve multiple apps on subdomains through Nginx.",
+     "videos": [
+      "nginx reverse proxy tutorial",
+      "nginx server blocks subdomains",
+      "nginx crash course"
+     ],
+     "docs": [
+      {
+       "title": "Nginx docs",
+       "url": "https://nginx.org/en/docs/"
+      }
+     ]
+    },
+    {
+     "id": "vps-caddy-automatic-https",
+     "title": "Caddy: automatic HTTPS",
+     "level": "Beginner",
+     "summary": "The easy web server with built-in certificates.",
+     "videos": [
+      "caddy server tutorial",
+      "caddy reverse proxy",
+      "caddy vs nginx"
+     ],
+     "docs": [
+      {
+       "title": "Caddy docs",
+       "url": "https://caddyserver.com/docs/"
+      }
+     ]
+    },
+    {
+     "id": "vps-ssl-with-let-s-encrypt",
+     "title": "SSL with Let's Encrypt",
+     "level": "Beginner",
+     "summary": "Free certificates with certbot and auto-renewal.",
+     "videos": [
+      "certbot nginx tutorial",
+      "lets encrypt ssl tutorial",
+      "https setup vps"
+     ],
+     "docs": [
+      {
+       "title": "Certbot",
+       "url": "https://certbot.eff.org"
+      }
+     ]
+    },
+    {
+     "id": "vps-node-js-python-on-a-server",
+     "title": "Node.js & Python on a server",
+     "level": "Beginner",
+     "summary": "nvm, uv/pyenv, virtualenvs and running apps.",
+     "videos": [
+      "install node on ubuntu nvm",
+      "python virtual environment server",
+      "deploy python app vps"
+     ],
+     "docs": [
+      {
+       "title": "nvm on GitHub",
+       "url": "https://github.com/nvm-sh/nvm"
+      },
+      {
+       "title": "uv docs",
+       "url": "https://docs.astral.sh/uv/"
+      }
+     ]
+    },
+    {
+     "id": "vps-pm2-process-manager",
+     "title": "PM2 process manager",
+     "level": "Beginner",
+     "summary": "Keep Node apps alive, logs, startup scripts.",
+     "videos": [
+      "pm2 tutorial",
+      "pm2 node deployment",
+      "pm2 startup"
+     ],
+     "docs": [
+      {
+       "title": "PM2 quick start",
+       "url": "https://pm2.keymetrics.io/docs/usage/quick-start/"
+      }
+     ]
+    },
+    {
+     "id": "vps-backups-snapshots",
+     "title": "Backups & snapshots",
+     "level": "Intermediate",
+     "summary": "VPS snapshots, restic/borg backups, database dumps.",
+     "videos": [
+      "restic backup tutorial",
+      "linux server backup strategy",
+      "vps snapshot backup"
+     ],
+     "docs": [
+      {
+       "title": "restic docs",
+       "url": "https://restic.readthedocs.io"
+      }
+     ]
+    },
+    {
+     "id": "vps-monitoring-uptime",
+     "title": "Monitoring & uptime",
+     "level": "Intermediate",
+     "summary": "Uptime Kuma, Netdata and alerts to your phone.",
+     "videos": [
+      "uptime kuma tutorial",
+      "netdata tutorial",
+      "server monitoring self hosted"
+     ],
+     "docs": [
+      {
+       "title": "Uptime Kuma on GitHub",
+       "url": "https://github.com/louislam/uptime-kuma"
+      },
+      {
+       "title": "Netdata docs",
+       "url": "https://learn.netdata.cloud"
+      }
+     ]
+    },
+    {
+     "id": "vps-hostinger-vps-specifics",
+     "title": "Hostinger VPS specifics",
+     "level": "Beginner",
+     "summary": "hPanel, OS templates, firewall, snapshots and DNS on Hostinger.",
+     "videos": [
+      "hostinger vps tutorial",
+      "hostinger vps setup",
+      "hostinger hpanel vps"
+     ],
+     "docs": [
+      {
+       "title": "Hostinger VPS tutorials",
+       "url": "https://www.hostinger.com/tutorials/vps"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "deploy",
+   "title": "Docker & deployment",
+   "icon": "deployed_code",
+   "color": "#F97316",
+   "summary": "Packaging and shipping apps: containers, compose stacks, self-hosted PaaS and CI/CD.",
+   "topics": [
+    {
+     "id": "deploy-docker-fundamentals",
+     "title": "Docker fundamentals",
+     "level": "Beginner",
+     "summary": "Images, containers, ports, volumes — the mental model.",
+     "videos": [
+      "docker tutorial for beginners",
+      "docker crash course",
+      "docker explained"
+     ],
+     "docs": [
+      {
+       "title": "Docker get started",
+       "url": "https://docs.docker.com/get-started/"
+      }
+     ]
+    },
+    {
+     "id": "deploy-writing-dockerfiles",
+     "title": "Writing Dockerfiles",
+     "level": "Beginner",
+     "summary": "Multi-stage builds, caching and small images.",
+     "videos": [
+      "dockerfile tutorial",
+      "multi stage docker build",
+      "dockerfile best practices"
+     ],
+     "docs": [
+      {
+       "title": "Docker get started",
+       "url": "https://docs.docker.com/get-started/"
+      }
+     ]
+    },
+    {
+     "id": "deploy-docker-compose-stacks",
+     "title": "Docker Compose stacks",
+     "level": "Beginner",
+     "summary": "App + database + proxy in one file.",
+     "videos": [
+      "docker compose tutorial",
+      "docker compose crash course",
+      "docker compose production"
+     ],
+     "docs": [
+      {
+       "title": "Jetpack Compose",
+       "url": "https://developer.android.com/develop/ui/compose"
+      }
+     ]
+    },
+    {
+     "id": "deploy-coolify",
+     "title": "Coolify",
+     "level": "Beginner",
+     "summary": "Self-hosted Heroku/Vercel on your VPS.",
+     "videos": [
+      "coolify tutorial",
+      "coolify self hosting",
+      "coolify vps setup"
+     ],
+     "docs": [
+      {
+       "title": "Coolify docs",
+       "url": "https://coolify.io/docs"
+      }
+     ]
+    },
+    {
+     "id": "deploy-dokploy-caprover",
+     "title": "Dokploy & CapRover",
+     "level": "Intermediate",
+     "summary": "Other self-hosted PaaS options.",
+     "videos": [
+      "dokploy tutorial",
+      "caprover tutorial"
+     ],
+     "docs": [
+      {
+       "title": "Dokploy docs",
+       "url": "https://docs.dokploy.com"
+      },
+      {
+       "title": "CapRover docs",
+       "url": "https://caprover.com/docs/get-started.html"
+      }
+     ]
+    },
+    {
+     "id": "deploy-ci-cd-with-github-actions",
+     "title": "CI/CD with GitHub Actions",
+     "level": "Intermediate",
+     "summary": "Test, build and deploy on every push.",
+     "videos": [
+      "github actions tutorial",
+      "github actions deploy to vps",
+      "github actions ci cd"
+     ],
+     "docs": [
+      {
+       "title": "GitHub Actions docs",
+       "url": "https://docs.github.com/en/actions"
+      }
+     ]
+    },
+    {
+     "id": "deploy-deploying-to-a-vps-over-ssh",
+     "title": "Deploying to a VPS over SSH",
+     "level": "Intermediate",
+     "summary": "rsync/git pull deploys, deploy keys and scripts.",
+     "videos": [
+      "deploy to vps with github actions ssh",
+      "deploy website to vps",
+      "git pull deploy script"
+     ],
+     "docs": [
+      {
+       "title": "GitHub Actions docs",
+       "url": "https://docs.github.com/en/actions"
+      },
+      {
+       "title": "DigitalOcean tutorials",
+       "url": "https://www.digitalocean.com/community/tutorials"
+      }
+     ]
+    },
+    {
+     "id": "deploy-environment-variables-secrets",
+     "title": "Environment variables & secrets",
+     "level": "Beginner",
+     "summary": ".env files, secret stores and never committing keys.",
+     "videos": [
+      "environment variables explained",
+      "manage secrets docker",
+      "github actions secrets"
+     ],
+     "docs": [
+      {
+       "title": "GitHub: using secrets",
+       "url": "https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions"
+      }
+     ]
+    },
+    {
+     "id": "deploy-zero-downtime-rollbacks",
+     "title": "Zero-downtime & rollbacks",
+     "level": "Advanced",
+     "summary": "Blue/green, health checks and rolling back safely.",
+     "videos": [
+      "zero downtime deployment",
+      "blue green deployment explained",
+      "docker rollback strategy"
+     ],
+     "docs": [
+      {
+       "title": "roadmap.sh DevOps",
+       "url": "https://roadmap.sh/devops"
+      }
+     ]
+    },
+    {
+     "id": "deploy-static-sites-frontends",
+     "title": "Static sites & frontends",
+     "level": "Beginner",
+     "summary": "Hosting static builds, Nginx/Caddy, or Vercel/Netlify/Cloudflare Pages.",
+     "videos": [
+      "deploy static site vps nginx",
+      "deploy nextjs vps",
+      "cloudflare pages tutorial"
+     ],
+     "docs": [
+      {
+       "title": "Nginx docs",
+       "url": "https://nginx.org/en/docs/"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "git",
+   "title": "Git & GitHub",
+   "icon": "account_tree",
+   "color": "#E5E7EB",
+   "summary": "Version control that keeps AI agents safe: branches, PRs, Actions, releases.",
+   "topics": [
+    {
+     "id": "git-git-basics",
+     "title": "Git basics",
+     "level": "Beginner",
+     "summary": "commit, branch, merge, push, pull — and undoing mistakes.",
+     "videos": [
+      "git tutorial for beginners",
+      "git crash course",
+      "git and github for beginners"
+     ],
+     "docs": [
+      {
+       "title": "Pro Git book",
+       "url": "https://git-scm.com/book/en/v2"
+      }
+     ]
+    },
+    {
+     "id": "git-branches-pull-requests",
+     "title": "Branches & pull requests",
+     "level": "Beginner",
+     "summary": "Working on branches and reviewing agent changes as PRs.",
+     "videos": [
+      "git branching tutorial",
+      "github pull request tutorial",
+      "git workflow"
+     ],
+     "docs": [
+      {
+       "title": "GitHub docs",
+       "url": "https://docs.github.com"
+      }
+     ]
+    },
+    {
+     "id": "git-undo-anything",
+     "title": "Undo anything",
+     "level": "Intermediate",
+     "summary": "reset, revert, reflog, stash and recovering lost work.",
+     "videos": [
+      "git undo mistakes",
+      "git reflog tutorial",
+      "git reset vs revert"
+     ],
+     "docs": [
+      {
+       "title": "Pro Git book",
+       "url": "https://git-scm.com/book/en/v2"
+      }
+     ]
+    },
+    {
+     "id": "git-github-cli-gh",
+     "title": "GitHub CLI (gh)",
+     "level": "Intermediate",
+     "summary": "Repos, PRs, issues, Actions and releases from the terminal.",
+     "videos": [
+      "github cli tutorial",
+      "gh cli pull requests",
+      "gh cli actions"
+     ],
+     "docs": [
+      {
+       "title": "GitHub CLI manual",
+       "url": "https://cli.github.com/manual/"
+      }
+     ]
+    },
+    {
+     "id": "git-github-actions-deep-dive",
+     "title": "GitHub Actions deep dive",
+     "level": "Intermediate",
+     "summary": "Workflows, matrices, caching, artifacts and releases.",
+     "videos": [
+      "github actions full course",
+      "github actions artifacts releases",
+      "github actions caching"
+     ],
+     "docs": [
+      {
+       "title": "GitHub Actions docs",
+       "url": "https://docs.github.com/en/actions"
+      }
+     ]
+    },
+    {
+     "id": "git-releases-versioning",
+     "title": "Releases & versioning",
+     "level": "Beginner",
+     "summary": "Tags, semantic versioning and publishing APKs/binaries.",
+     "videos": [
+      "github releases tutorial",
+      "semantic versioning explained",
+      "release workflow github actions"
+     ],
+     "docs": [
+      {
+       "title": "GitHub docs",
+       "url": "https://docs.github.com"
+      }
+     ]
+    },
+    {
+     "id": "git-git-worktrees-for-parallel-agents",
+     "title": "Git worktrees for parallel agents",
+     "level": "Advanced",
+     "summary": "Run several agents on separate branches at once.",
+     "videos": [
+      "git worktrees tutorial",
+      "git worktree claude code parallel",
+      "git worktrees explained"
+     ],
+     "docs": [
+      {
+       "title": "Pro Git book",
+       "url": "https://git-scm.com/book/en/v2"
+      },
+      {
+       "title": "Claude Code docs",
+       "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
+      }
+     ]
+    },
+    {
+     "id": "git-codespaces-cloud-dev-environments",
+     "title": "Codespaces & cloud dev environments",
+     "level": "Intermediate",
+     "summary": "A full dev box in the cloud you can open from a phone browser.",
+     "videos": [
+      "github codespaces tutorial",
+      "codespaces on ipad phone",
+      "cloud development environment"
+     ],
+     "docs": [
+      {
+       "title": "GitHub Codespaces docs",
+       "url": "https://docs.github.com/en/codespaces"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "protocols",
+   "title": "Protocols & integration",
+   "icon": "cable",
+   "color": "#22D3EE",
+   "summary": "How the pieces talk: MCP, A2A, ACP, REST, webhooks, streaming and auth.",
+   "topics": [
+    {
+     "id": "protocols-mcp-explained",
+     "title": "MCP explained",
+     "level": "Beginner",
+     "summary": "What the Model Context Protocol is and why every agent speaks it.",
+     "videos": [
+      "model context protocol explained",
+      "mcp explained simply",
+      "what is mcp ai"
+     ],
+     "docs": [
+      {
+       "title": "Model Context Protocol",
+       "url": "https://modelcontextprotocol.io"
+      }
+     ]
+    },
+    {
+     "id": "protocols-using-mcp-servers",
+     "title": "Using MCP servers",
+     "level": "Beginner",
+     "summary": "Installing and configuring existing servers for files, GitHub, databases, browsers.",
+     "videos": [
+      "best mcp servers",
+      "mcp servers tutorial",
+      "mcp github server"
+     ],
+     "docs": [
+      {
+       "title": "MCP reference servers",
+       "url": "https://github.com/modelcontextprotocol/servers"
+      }
+     ]
+    },
+    {
+     "id": "protocols-build-an-mcp-server-typescript",
+     "title": "Build an MCP server (TypeScript)",
+     "level": "Intermediate",
+     "summary": "Tools, resources and prompts with the TS SDK.",
+     "videos": [
+      "build mcp server typescript",
+      "mcp server tutorial typescript",
+      "create mcp server"
+     ],
+     "docs": [
+      {
+       "title": "Model Context Protocol",
+       "url": "https://modelcontextprotocol.io"
+      }
+     ]
+    },
+    {
+     "id": "protocols-build-an-mcp-server-python",
+     "title": "Build an MCP server (Python)",
+     "level": "Intermediate",
+     "summary": "FastMCP and the Python SDK.",
+     "videos": [
+      "build mcp server python",
+      "fastmcp tutorial",
+      "python mcp server"
+     ],
+     "docs": [
+      {
+       "title": "Model Context Protocol",
+       "url": "https://modelcontextprotocol.io"
+      }
+     ]
+    },
+    {
+     "id": "protocols-remote-mcp-http-transport-oauth",
+     "title": "Remote MCP, HTTP transport & OAuth",
+     "level": "Advanced",
+     "summary": "Hosting MCP servers on your VPS and securing them.",
+     "videos": [
+      "remote mcp server",
+      "mcp streamable http",
+      "mcp oauth authentication"
+     ],
+     "docs": [
+      {
+       "title": "Model Context Protocol",
+       "url": "https://modelcontextprotocol.io"
+      },
+      {
+       "title": "OAuth 2.0",
+       "url": "https://oauth.net/2/"
+      }
+     ]
+    },
+    {
+     "id": "protocols-a2a-agent-to-agent",
+     "title": "A2A: agent-to-agent",
+     "level": "Intermediate",
+     "summary": "How agents from different vendors collaborate.",
+     "videos": [
+      "a2a protocol explained",
+      "agent2agent protocol tutorial",
+      "a2a vs mcp"
+     ],
+     "docs": [
+      {
+       "title": "A2A protocol",
+       "url": "https://a2a-protocol.org"
+      }
+     ]
+    },
+    {
+     "id": "protocols-acp-agent-client-protocol",
+     "title": "ACP: Agent Client Protocol",
+     "level": "Intermediate",
+     "summary": "Connecting agents to editors like Zed.",
+     "videos": [
+      "agent client protocol",
+      "zed acp claude code"
+     ],
+     "docs": [
+      {
+       "title": "Agent Client Protocol",
+       "url": "https://agentclientprotocol.com"
+      }
+     ]
+    },
+    {
+     "id": "protocols-rest-apis-http",
+     "title": "REST APIs & HTTP",
+     "level": "Beginner",
+     "summary": "Methods, status codes, headers, JSON and calling APIs with curl.",
+     "videos": [
+      "rest api explained",
+      "http crash course",
+      "curl tutorial"
+     ],
+     "docs": [
+      {
+       "title": "MDN: HTTP",
+       "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP"
+      }
+     ]
+    },
+    {
+     "id": "protocols-webhooks",
+     "title": "Webhooks",
+     "level": "Beginner",
+     "summary": "Letting services call you — the glue of automations.",
+     "videos": [
+      "webhooks explained",
+      "webhook tutorial",
+      "receive webhooks"
+     ],
+     "docs": [
+      {
+       "title": "MDN: HTTP",
+       "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP"
+      }
+     ]
+    },
+    {
+     "id": "protocols-streaming-sse-websockets",
+     "title": "Streaming: SSE & WebSockets",
+     "level": "Intermediate",
+     "summary": "How chat apps stream tokens and live updates.",
+     "videos": [
+      "server sent events tutorial",
+      "websockets tutorial",
+      "sse vs websockets"
+     ],
+     "docs": [
+      {
+       "title": "MDN: Server-sent events",
+       "url": "https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events"
+      },
+      {
+       "title": "MDN: WebSockets",
+       "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API"
+      }
+     ]
+    },
+    {
+     "id": "protocols-auth-api-keys-oauth-jwt",
+     "title": "Auth: API keys, OAuth & JWT",
+     "level": "Intermediate",
+     "summary": "Securing APIs and connecting accounts.",
+     "videos": [
+      "oauth 2 explained",
+      "jwt explained",
+      "api key authentication best practices"
+     ],
+     "docs": [
+      {
+       "title": "OAuth 2.0",
+       "url": "https://oauth.net/2/"
+      },
+      {
+       "title": "JWT introduction",
+       "url": "https://jwt.io/introduction"
+      }
+     ]
+    },
+    {
+     "id": "protocols-json-rpc-lsp",
+     "title": "JSON-RPC & LSP",
+     "level": "Advanced",
+     "summary": "The message formats under MCP and editor integrations.",
+     "videos": [
+      "json rpc explained",
+      "language server protocol explained"
+     ],
+     "docs": [
+      {
+       "title": "JSON-RPC 2.0 spec",
+       "url": "https://www.jsonrpc.org/specification"
+      },
+      {
+       "title": "Language Server Protocol",
+       "url": "https://microsoft.github.io/language-server-protocol/"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "automation",
+   "title": "Automation & workflows",
+   "icon": "bolt",
+   "color": "#FB7185",
+   "summary": "Make your stack run itself: n8n, webhooks, schedules and AI agents in workflows.",
+   "topics": [
+    {
+     "id": "automation-n8n-basics",
+     "title": "n8n basics",
+     "level": "Beginner",
+     "summary": "Nodes, triggers, credentials and your first workflow.",
+     "videos": [
+      "n8n tutorial for beginners",
+      "n8n crash course",
+      "n8n workflow automation"
+     ],
+     "docs": [
+      {
+       "title": "n8n docs",
+       "url": "https://docs.n8n.io"
+      }
+     ]
+    },
+    {
+     "id": "automation-self-host-n8n-on-a-vps",
+     "title": "Self-host n8n on a VPS",
+     "level": "Intermediate",
+     "summary": "Docker, domain, HTTPS and queue mode.",
+     "videos": [
+      "self host n8n vps",
+      "n8n docker compose setup",
+      "n8n hostinger vps"
+     ],
+     "docs": [
+      {
+       "title": "n8n self-hosting",
+       "url": "https://docs.n8n.io/hosting/"
+      },
+      {
+       "title": "Hostinger VPS tutorials",
+       "url": "https://www.hostinger.com/tutorials/vps"
+      }
+     ]
+    },
+    {
+     "id": "automation-ai-agents-in-n8n",
+     "title": "AI agents in n8n",
+     "level": "Intermediate",
+     "summary": "AI Agent node, tools, memory and Claude as the model.",
+     "videos": [
+      "n8n ai agent tutorial",
+      "n8n claude ai",
+      "n8n ai agents build"
+     ],
+     "docs": [
+      {
+       "title": "n8n docs",
+       "url": "https://docs.n8n.io"
+      }
+     ]
+    },
+    {
+     "id": "automation-n8n-mcp",
+     "title": "n8n + MCP",
+     "level": "Advanced",
+     "summary": "Using n8n as an MCP server/client to give agents real-world actions.",
+     "videos": [
+      "n8n mcp server",
+      "n8n mcp client claude"
+     ],
+     "docs": [
+      {
+       "title": "n8n docs",
+       "url": "https://docs.n8n.io"
+      },
+      {
+       "title": "Model Context Protocol",
+       "url": "https://modelcontextprotocol.io"
+      }
+     ]
+    },
+    {
+     "id": "automation-make-zapier",
+     "title": "Make & Zapier",
+     "level": "Beginner",
+     "summary": "Hosted no-code automation and when to choose them.",
+     "videos": [
+      "make com tutorial",
+      "zapier tutorial",
+      "n8n vs make vs zapier"
+     ],
+     "docs": [
+      {
+       "title": "Make help center",
+       "url": "https://www.make.com/en/help"
+      },
+      {
+       "title": "Zapier help",
+       "url": "https://help.zapier.com"
+      }
+     ]
+    },
+    {
+     "id": "automation-node-red",
+     "title": "Node-RED",
+     "level": "Intermediate",
+     "summary": "Flow-based automation, great for IoT and home servers.",
+     "videos": [
+      "node red tutorial",
+      "node red beginners"
+     ],
+     "docs": [
+      {
+       "title": "Node-RED docs",
+       "url": "https://nodered.org/docs/"
+      }
+     ]
+    },
+    {
+     "id": "automation-pipedream-activepieces",
+     "title": "Pipedream & Activepieces",
+     "level": "Intermediate",
+     "summary": "Code-friendly and open-source alternatives.",
+     "videos": [
+      "pipedream tutorial",
+      "activepieces tutorial"
+     ],
+     "docs": [
+      {
+       "title": "Pipedream docs",
+       "url": "https://pipedream.com/docs"
+      },
+      {
+       "title": "Activepieces docs",
+       "url": "https://www.activepieces.com/docs"
+      }
+     ]
+    },
+    {
+     "id": "automation-schedules-cron-systemd-timers",
+     "title": "Schedules: cron & systemd timers",
+     "level": "Beginner",
+     "summary": "Running jobs on a schedule on your server.",
+     "videos": [
+      "cron job tutorial",
+      "crontab explained",
+      "systemd timers tutorial"
+     ],
+     "docs": [
+      {
+       "title": "systemd.service manual",
+       "url": "https://www.freedesktop.org/software/systemd/man/latest/systemd.service.html"
+      }
+     ]
+    },
+    {
+     "id": "automation-notifications-to-your-phone",
+     "title": "Notifications to your phone",
+     "level": "Beginner",
+     "summary": "Telegram/Discord/ntfy alerts from scripts and workflows.",
+     "videos": [
+      "ntfy notifications tutorial",
+      "telegram bot notifications script",
+      "discord webhook notifications"
+     ],
+     "docs": []
+    }
+   ]
+  },
+  {
+   "id": "aiapps",
+   "title": "Build AI apps & agents",
+   "icon": "psychology",
+   "color": "#C084FC",
+   "summary": "From API call to production agent: tools, streaming, RAG, frameworks, evals.",
+   "topics": [
+    {
+     "id": "aiapps-your-first-claude-api-call",
+     "title": "Your first Claude API call",
+     "level": "Beginner",
+     "summary": "Keys, Messages API, system prompts and SDKs.",
+     "videos": [
+      "claude api tutorial",
+      "anthropic api python tutorial",
+      "claude api getting started"
+     ],
+     "docs": [
+      {
+       "title": "Claude API docs",
+       "url": "https://docs.claude.com/en/api/overview"
+      },
+      {
+       "title": "Claude cookbooks",
+       "url": "https://github.com/anthropics/anthropic-cookbook"
+      }
+     ]
+    },
+    {
+     "id": "aiapps-tool-use-function-calling",
+     "title": "Tool use / function calling",
+     "level": "Intermediate",
+     "summary": "Letting models call your functions and APIs.",
+     "videos": [
+      "claude tool use tutorial",
+      "function calling llm tutorial",
+      "anthropic tool use"
+     ],
+     "docs": [
+      {
+       "title": "Claude API docs",
+       "url": "https://docs.claude.com/en/api/overview"
+      },
+      {
+       "title": "Claude cookbooks",
+       "url": "https://github.com/anthropics/anthropic-cookbook"
+      }
+     ]
+    },
+    {
+     "id": "aiapps-streaming-responses",
+     "title": "Streaming responses",
+     "level": "Intermediate",
+     "summary": "SSE streaming for responsive chat UIs.",
+     "videos": [
+      "claude api streaming",
+      "stream llm responses tutorial"
+     ],
+     "docs": [
+      {
+       "title": "Claude API docs",
+       "url": "https://docs.claude.com/en/api/overview"
+      }
+     ]
+    },
+    {
+     "id": "aiapps-prompt-caching-cost-control",
+     "title": "Prompt caching & cost control",
+     "level": "Intermediate",
+     "summary": "Caching long prompts, batching and choosing models.",
+     "videos": [
+      "prompt caching claude",
+      "reduce llm api costs"
+     ],
+     "docs": [
+      {
+       "title": "Claude API docs",
+       "url": "https://docs.claude.com/en/api/overview"
+      }
+     ]
+    },
+    {
+     "id": "aiapps-structured-outputs",
+     "title": "Structured outputs",
+     "level": "Intermediate",
+     "summary": "Reliable JSON from models.",
+     "videos": [
+      "llm structured output json",
+      "claude json output"
+     ],
+     "docs": [
+      {
+       "title": "Claude API docs",
+       "url": "https://docs.claude.com/en/api/overview"
+      }
+     ]
+    },
+    {
+     "id": "aiapps-rag-retrieval-augmented-generation",
+     "title": "RAG: retrieval-augmented generation",
+     "level": "Intermediate",
+     "summary": "Chunking, embeddings and retrieval over your docs.",
+     "videos": [
+      "rag tutorial",
+      "retrieval augmented generation explained",
+      "build rag app"
+     ],
+     "docs": [
+      {
+       "title": "LlamaIndex docs",
+       "url": "https://docs.llamaindex.ai"
+      },
+      {
+       "title": "LangChain docs",
+       "url": "https://python.langchain.com"
+      }
+     ]
+    },
+    {
+     "id": "aiapps-vector-databases",
+     "title": "Vector databases",
+     "level": "Intermediate",
+     "summary": "pgvector, Qdrant, Chroma and picking one.",
+     "videos": [
+      "vector database explained",
+      "pgvector tutorial",
+      "qdrant tutorial"
+     ],
+     "docs": [
+      {
+       "title": "pgvector on GitHub",
+       "url": "https://github.com/pgvector/pgvector"
+      },
+      {
+       "title": "Qdrant docs",
+       "url": "https://qdrant.tech/documentation/"
+      },
+      {
+       "title": "Chroma docs",
+       "url": "https://docs.trychroma.com"
+      }
+     ]
+    },
+    {
+     "id": "aiapps-langchain-langgraph",
+     "title": "LangChain & LangGraph",
+     "level": "Intermediate",
+     "summary": "Chains, graphs and stateful agents.",
+     "videos": [
+      "langgraph tutorial",
+      "langchain tutorial",
+      "langgraph agents"
+     ],
+     "docs": [
+      {
+       "title": "LangChain docs",
+       "url": "https://python.langchain.com"
+      },
+      {
+       "title": "LangGraph docs",
+       "url": "https://langchain-ai.github.io/langgraph/"
+      }
+     ]
+    },
+    {
+     "id": "aiapps-llamaindex",
+     "title": "LlamaIndex",
+     "level": "Intermediate",
+     "summary": "Data frameworks for RAG and agents.",
+     "videos": [
+      "llamaindex tutorial",
+      "llamaindex rag"
+     ],
+     "docs": [
+      {
+       "title": "LlamaIndex docs",
+       "url": "https://docs.llamaindex.ai"
+      }
+     ]
+    },
+    {
+     "id": "aiapps-crewai-autogen-multi-agent",
+     "title": "CrewAI, AutoGen & multi-agent",
+     "level": "Intermediate",
+     "summary": "Teams of agents with roles.",
+     "videos": [
+      "crewai tutorial",
+      "autogen tutorial",
+      "multi agent systems tutorial"
+     ],
+     "docs": [
+      {
+       "title": "CrewAI docs",
+       "url": "https://docs.crewai.com"
+      },
+      {
+       "title": "AutoGen on GitHub",
+       "url": "https://github.com/microsoft/autogen"
+      }
+     ]
+    },
+    {
+     "id": "aiapps-openai-agents-sdk-responses-api",
+     "title": "OpenAI Agents SDK & Responses API",
+     "level": "Intermediate",
+     "summary": "OpenAI's agent toolkit.",
+     "videos": [
+      "openai agents sdk tutorial",
+      "openai responses api tutorial"
+     ],
+     "docs": [
+      {
+       "title": "OpenAI Agents SDK",
+       "url": "https://openai.github.io/openai-agents-python/"
+      },
+      {
+       "title": "OpenAI platform docs",
+       "url": "https://platform.openai.com/docs"
+      }
+     ]
+    },
+    {
+     "id": "aiapps-vercel-ai-sdk",
+     "title": "Vercel AI SDK",
+     "level": "Intermediate",
+     "summary": "TypeScript toolkit for AI web apps.",
+     "videos": [
+      "vercel ai sdk tutorial",
+      "ai sdk nextjs chat app"
+     ],
+     "docs": [
+      {
+       "title": "Vercel AI SDK",
+       "url": "https://ai-sdk.dev/docs"
+      }
+     ]
+    },
+    {
+     "id": "aiapps-pydantic-ai-mastra-dspy",
+     "title": "Pydantic AI, Mastra & DSPy",
+     "level": "Advanced",
+     "summary": "Typed agents and programmatic prompting.",
+     "videos": [
+      "pydantic ai tutorial",
+      "mastra ai tutorial",
+      "dspy tutorial"
+     ],
+     "docs": [
+      {
+       "title": "Pydantic AI",
+       "url": "https://ai.pydantic.dev"
+      },
+      {
+       "title": "Mastra docs",
+       "url": "https://mastra.ai/docs"
+      },
+      {
+       "title": "DSPy",
+       "url": "https://dspy.ai"
+      }
+     ]
+    },
+    {
+     "id": "aiapps-observability-evals-in-production",
+     "title": "Observability & evals in production",
+     "level": "Advanced",
+     "summary": "Tracing, logging and evaluating agents with Langfuse and friends.",
+     "videos": [
+      "langfuse tutorial",
+      "llm observability",
+      "llm evaluation production"
+     ],
+     "docs": [
+      {
+       "title": "Langfuse docs",
+       "url": "https://langfuse.com/docs"
+      }
+     ]
+    },
+    {
+     "id": "aiapps-building-a-chat-app-end-to-end",
+     "title": "Building a chat app end to end",
+     "level": "Intermediate",
+     "summary": "Backend + streaming + auth + deploy.",
+     "videos": [
+      "build ai chat app full stack",
+      "build chatgpt clone tutorial"
+     ],
+     "docs": [
+      {
+       "title": "Claude API docs",
+       "url": "https://docs.claude.com/en/api/overview"
+      },
+      {
+       "title": "Vercel AI SDK",
+       "url": "https://ai-sdk.dev/docs"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "local",
+   "title": "Local & open models",
+   "icon": "memory",
+   "color": "#A3E635",
+   "summary": "Running models yourself: Ollama, LM Studio, llama.cpp, vLLM and routers.",
+   "topics": [
+    {
+     "id": "local-ollama",
+     "title": "Ollama",
+     "level": "Beginner",
+     "summary": "Run open models locally or on a server with one command.",
+     "videos": [
+      "ollama tutorial",
+      "ollama setup",
+      "ollama api"
+     ],
+     "docs": [
+      {
+       "title": "Ollama",
+       "url": "https://ollama.com"
+      },
+      {
+       "title": "Ollama on GitHub",
+       "url": "https://github.com/ollama/ollama"
+      }
+     ]
+    },
+    {
+     "id": "local-lm-studio",
+     "title": "LM Studio",
+     "level": "Beginner",
+     "summary": "Desktop app for local models with an OpenAI-compatible server.",
+     "videos": [
+      "lm studio tutorial",
+      "lm studio local llm"
+     ],
+     "docs": [
+      {
+       "title": "LM Studio docs",
+       "url": "https://lmstudio.ai/docs"
+      }
+     ]
+    },
+    {
+     "id": "local-llama-cpp-quantization",
+     "title": "llama.cpp & quantization",
+     "level": "Intermediate",
+     "summary": "GGUF, quantization levels and running on CPU/GPU.",
+     "videos": [
+      "llama.cpp tutorial",
+      "llm quantization explained",
+      "gguf explained"
+     ],
+     "docs": [
+      {
+       "title": "llama.cpp on GitHub",
+       "url": "https://github.com/ggml-org/llama.cpp"
+      }
+     ]
+    },
+    {
+     "id": "local-vllm-serving",
+     "title": "vLLM serving",
+     "level": "Advanced",
+     "summary": "High-throughput model serving on GPUs.",
+     "videos": [
+      "vllm tutorial",
+      "vllm serve model"
+     ],
+     "docs": [
+      {
+       "title": "vLLM docs",
+       "url": "https://docs.vllm.ai"
+      }
+     ]
+    },
+    {
+     "id": "local-openrouter-litellm",
+     "title": "OpenRouter & LiteLLM",
+     "level": "Intermediate",
+     "summary": "One API for hundreds of models; proxies and fallbacks.",
+     "videos": [
+      "openrouter tutorial",
+      "litellm proxy tutorial"
+     ],
+     "docs": [
+      {
+       "title": "OpenRouter docs",
+       "url": "https://openrouter.ai/docs"
+      },
+      {
+       "title": "LiteLLM docs",
+       "url": "https://docs.litellm.ai"
+      }
+     ]
+    },
+    {
+     "id": "local-open-models-for-coding",
+     "title": "Open models for coding",
+     "level": "Intermediate",
+     "summary": "Qwen, DeepSeek, Llama and others with coding agents.",
+     "videos": [
+      "best open source coding model",
+      "local llm for coding",
+      "qwen coder local"
+     ],
+     "docs": [
+      {
+       "title": "Hugging Face Learn",
+       "url": "https://huggingface.co/learn"
+      }
+     ]
+    },
+    {
+     "id": "local-gpu-servers-costs",
+     "title": "GPU servers & costs",
+     "level": "Advanced",
+     "summary": "Renting GPUs and when self-hosting is worth it.",
+     "videos": [
+      "rent gpu for llm",
+      "self host llm cost"
+     ],
+     "docs": [
+      {
+       "title": "vLLM docs",
+       "url": "https://docs.vllm.ai"
+      }
+     ]
+    },
+    {
+     "id": "local-hugging-face",
+     "title": "Hugging Face",
+     "level": "Beginner",
+     "summary": "Models, datasets, Spaces and the free courses.",
+     "videos": [
+      "hugging face tutorial",
+      "hugging face course"
+     ],
+     "docs": [
+      {
+       "title": "Hugging Face Learn",
+       "url": "https://huggingface.co/learn"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "android",
+   "title": "Android apps with AI",
+   "icon": "android",
+   "color": "#4ADE80",
+   "summary": "Kotlin + Compose apps built with agents and shipped via CI — straight to your phone.",
+   "topics": [
+    {
+     "id": "android-kotlin-essentials",
+     "title": "Kotlin essentials",
+     "level": "Beginner",
+     "summary": "The language basics you need to read and steer agent-written Android code.",
+     "videos": [
+      "kotlin tutorial for beginners",
+      "kotlin crash course",
+      "kotlin for android developers"
+     ],
+     "docs": [
+      {
+       "title": "Kotlin docs",
+       "url": "https://kotlinlang.org/docs/home.html"
+      }
+     ]
+    },
+    {
+     "id": "android-jetpack-compose",
+     "title": "Jetpack Compose",
+     "level": "Beginner",
+     "summary": "Modern Android UI: composables, state, lists, navigation.",
+     "videos": [
+      "jetpack compose tutorial",
+      "jetpack compose crash course",
+      "compose navigation"
+     ],
+     "docs": [
+      {
+       "title": "Jetpack Compose",
+       "url": "https://developer.android.com/develop/ui/compose"
+      },
+      {
+       "title": "Android courses",
+       "url": "https://developer.android.com/courses"
+      }
+     ]
+    },
+    {
+     "id": "android-gradle-dependencies",
+     "title": "Gradle & dependencies",
+     "level": "Intermediate",
+     "summary": "Version catalogs, plugins and fixing build errors.",
+     "videos": [
+      "gradle android explained",
+      "gradle version catalog",
+      "fix gradle build errors android"
+     ],
+     "docs": [
+      {
+       "title": "Gradle user manual",
+       "url": "https://docs.gradle.org/current/userguide/userguide.html"
+      }
+     ]
+    },
+    {
+     "id": "android-apk-builds-in-github-actions",
+     "title": "APK builds in GitHub Actions",
+     "level": "Intermediate",
+     "summary": "Build, sign and release APKs from CI.",
+     "videos": [
+      "github actions android build apk",
+      "android ci cd github actions",
+      "sign apk github actions"
+     ],
+     "docs": [
+      {
+       "title": "GitHub Actions docs",
+       "url": "https://docs.github.com/en/actions"
+      }
+     ]
+    },
+    {
+     "id": "android-calling-ai-apis-from-android",
+     "title": "Calling AI APIs from Android",
+     "level": "Intermediate",
+     "summary": "OkHttp/Ktor, streaming and keeping keys safe.",
+     "videos": [
+      "android okhttp tutorial",
+      "android app chatgpt api",
+      "android streaming api"
+     ],
+     "docs": [
+      {
+       "title": "Claude API docs",
+       "url": "https://docs.claude.com/en/api/overview"
+      }
+     ]
+    },
+    {
+     "id": "android-webview-apps",
+     "title": "WebView apps",
+     "level": "Beginner",
+     "summary": "Embedding web content and video in apps.",
+     "videos": [
+      "android webview tutorial",
+      "webview compose"
+     ],
+     "docs": [
+      {
+       "title": "WebView guide",
+       "url": "https://developer.android.com/develop/ui/views/layout/webapps/webview"
+      }
+     ]
+    },
+    {
+     "id": "android-accessibility-services-automation",
+     "title": "Accessibility services & automation",
+     "level": "Advanced",
+     "summary": "Reading and driving other apps' screens.",
+     "videos": [
+      "android accessibility service tutorial",
+      "android automation app"
+     ],
+     "docs": [
+      {
+       "title": "AccessibilityService docs",
+       "url": "https://developer.android.com/guide/topics/ui/accessibility/service"
+      }
+     ]
+    },
+    {
+     "id": "android-publishing",
+     "title": "Publishing",
+     "level": "Intermediate",
+     "summary": "Signing, Play Console, and sideloading via GitHub Releases.",
+     "videos": [
+      "publish android app play store",
+      "release apk github"
+     ],
+     "docs": [
+      {
+       "title": "Play Console help",
+       "url": "https://support.google.com/googleplay/android-developer"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "foundations",
+   "title": "Programming foundations",
+   "icon": "code",
+   "color": "#FDE68A",
+   "summary": "The core skills that make you good at directing agents.",
+   "topics": [
+    {
+     "id": "foundations-linux-command-line",
+     "title": "Linux command line",
+     "level": "Beginner",
+     "summary": "Navigating, files, pipes, processes and package managers.",
+     "videos": [
+      "linux command line tutorial",
+      "linux for beginners",
+      "bash commands crash course"
+     ],
+     "docs": [
+      {
+       "title": "Linux Journey",
+       "url": "https://linuxjourney.com"
+      },
+      {
+       "title": "MIT Missing Semester",
+       "url": "https://missing.csail.mit.edu"
+      }
+     ]
+    },
+    {
+     "id": "foundations-bash-scripting",
+     "title": "Bash scripting",
+     "level": "Beginner",
+     "summary": "Variables, conditionals, loops and safe scripts.",
+     "videos": [
+      "bash scripting tutorial",
+      "bash scripting full course",
+      "shell scripting beginners"
+     ],
+     "docs": [
+      {
+       "title": "GNU Bash manual",
+       "url": "https://www.gnu.org/software/bash/manual/"
+      },
+      {
+       "title": "ShellCheck",
+       "url": "https://www.shellcheck.net"
+      }
+     ]
+    },
+    {
+     "id": "foundations-python",
+     "title": "Python",
+     "level": "Beginner",
+     "summary": "The lingua franca of AI tooling.",
+     "videos": [
+      "python tutorial for beginners",
+      "python full course",
+      "python for ai"
+     ],
+     "docs": [
+      {
+       "title": "Python tutorial",
+       "url": "https://docs.python.org/3/tutorial/"
+      },
+      {
+       "title": "uv docs",
+       "url": "https://docs.astral.sh/uv/"
+      }
+     ]
+    },
+    {
+     "id": "foundations-javascript-typescript",
+     "title": "JavaScript & TypeScript",
+     "level": "Beginner",
+     "summary": "Web, Node and most MCP servers.",
+     "videos": [
+      "javascript crash course",
+      "typescript tutorial",
+      "typescript for beginners"
+     ],
+     "docs": [
+      {
+       "title": "MDN JavaScript guide",
+       "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+      },
+      {
+       "title": "TypeScript handbook",
+       "url": "https://www.typescriptlang.org/docs/handbook/intro.html"
+      }
+     ]
+    },
+    {
+     "id": "foundations-node-js",
+     "title": "Node.js",
+     "level": "Beginner",
+     "summary": "Running JS on servers, npm and packages.",
+     "videos": [
+      "node js tutorial",
+      "node js crash course"
+     ],
+     "docs": [
+      {
+       "title": "Node.js docs",
+       "url": "https://nodejs.org/en/learn"
+      },
+      {
+       "title": "nvm on GitHub",
+       "url": "https://github.com/nvm-sh/nvm"
+      }
+     ]
+    },
+    {
+     "id": "foundations-json-yaml",
+     "title": "JSON & YAML",
+     "level": "Beginner",
+     "summary": "The config formats everything uses.",
+     "videos": [
+      "json explained",
+      "yaml tutorial"
+     ],
+     "docs": [
+      {
+       "title": "YAML spec",
+       "url": "https://yaml.org"
+      }
+     ]
+    },
+    {
+     "id": "foundations-sql-databases",
+     "title": "SQL & databases",
+     "level": "Beginner",
+     "summary": "Queries, Postgres, SQLite and Supabase.",
+     "videos": [
+      "sql tutorial",
+      "postgresql tutorial",
+      "supabase tutorial"
+     ],
+     "docs": [
+      {
+       "title": "SQLBolt",
+       "url": "https://sqlbolt.com"
+      },
+      {
+       "title": "PostgreSQL docs",
+       "url": "https://www.postgresql.org/docs/"
+      },
+      {
+       "title": "Supabase docs",
+       "url": "https://supabase.com/docs"
+      }
+     ]
+    },
+    {
+     "id": "foundations-regex",
+     "title": "Regex",
+     "level": "Intermediate",
+     "summary": "Pattern matching for logs, parsing and search.",
+     "videos": [
+      "regex tutorial",
+      "regular expressions crash course"
+     ],
+     "docs": [
+      {
+       "title": "Regex101",
+       "url": "https://regex101.com"
+      }
+     ]
+    },
+    {
+     "id": "foundations-debugging",
+     "title": "Debugging",
+     "level": "Intermediate",
+     "summary": "Reading stack traces and logs, and asking agents good debugging questions.",
+     "videos": [
+      "debugging tips programming",
+      "how to read stack trace",
+      "debug with ai"
+     ],
+     "docs": [
+      {
+       "title": "MIT Missing Semester",
+       "url": "https://missing.csail.mit.edu"
+      }
+     ]
+    },
+    {
+     "id": "foundations-how-the-web-works",
+     "title": "How the web works",
+     "level": "Beginner",
+     "summary": "DNS, HTTP, browsers, servers and APIs end to end.",
+     "videos": [
+      "how the web works",
+      "what happens when you type url",
+      "web development basics"
+     ],
+     "docs": [
+      {
+       "title": "MDN: HTTP",
+       "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP"
+      },
+      {
+       "title": "roadmap.sh Backend",
+       "url": "https://roadmap.sh/backend"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "security",
+   "title": "Security for AI development",
+   "icon": "shield",
+   "color": "#F87171",
+   "summary": "Keep keys, servers and agents safe.",
+   "topics": [
+    {
+     "id": "security-secrets-management",
+     "title": "Secrets management",
+     "level": "Beginner",
+     "summary": "Where API keys live, .env, vaults and rotating leaked keys.",
+     "videos": [
+      "secrets management developers",
+      "api key leaked what to do",
+      "dotenv best practices"
+     ],
+     "docs": [
+      {
+       "title": "GitHub: using secrets",
+       "url": "https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions"
+      }
+     ]
+    },
+    {
+     "id": "security-prompt-injection",
+     "title": "Prompt injection",
+     "level": "Intermediate",
+     "summary": "How agents get tricked by content they read, and defenses.",
+     "videos": [
+      "prompt injection explained",
+      "prompt injection ai agents",
+      "llm security"
+     ],
+     "docs": [
+      {
+       "title": "OWASP Top 10 for LLM apps",
+       "url": "https://genai.owasp.org"
+      }
+     ]
+    },
+    {
+     "id": "security-sandboxing-agents",
+     "title": "Sandboxing agents",
+     "level": "Intermediate",
+     "summary": "Containers, non-root users and permission modes for autonomous agents.",
+     "videos": [
+      "sandbox ai agent docker",
+      "claude code devcontainer",
+      "run ai agents safely"
+     ],
+     "docs": [
+      {
+       "title": "Claude Code docs",
+       "url": "https://docs.anthropic.com/en/docs/claude-code/overview"
+      },
+      {
+       "title": "Docker get started",
+       "url": "https://docs.docker.com/get-started/"
+      }
+     ]
+    },
+    {
+     "id": "security-server-hardening-checklist",
+     "title": "Server hardening checklist",
+     "level": "Intermediate",
+     "summary": "The essentials for any internet-facing VPS.",
+     "videos": [
+      "linux server hardening",
+      "vps security checklist"
+     ],
+     "docs": [
+      {
+       "title": "UFW (Ubuntu)",
+       "url": "https://help.ubuntu.com/community/UFW"
+      },
+      {
+       "title": "fail2ban on GitHub",
+       "url": "https://github.com/fail2ban/fail2ban"
+      }
+     ]
+    },
+    {
+     "id": "security-supply-chain-safety",
+     "title": "Supply-chain safety",
+     "level": "Intermediate",
+     "summary": "Packages, MCP servers and plugins you install.",
+     "videos": [
+      "npm supply chain attack",
+      "software supply chain security",
+      "mcp server security"
+     ],
+     "docs": [
+      {
+       "title": "OWASP Top 10 for LLM apps",
+       "url": "https://genai.owasp.org"
+      }
+     ]
+    },
+    {
+     "id": "security-owasp-top-10-for-llm-apps",
+     "title": "OWASP Top 10 for LLM apps",
+     "level": "Advanced",
+     "summary": "The main risk classes for AI applications.",
+     "videos": [
+      "owasp top 10 llm",
+      "llm application security"
+     ],
+     "docs": [
+      {
+       "title": "OWASP Top 10 for LLM apps",
+       "url": "https://genai.owasp.org"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "channels": [
+  {
+   "name": "Anthropic",
+   "handle": "anthropic-ai",
+   "about": "Claude, Claude Code and research talks",
+   "tag": "claude"
+  },
+  {
+   "name": "Claude",
+   "handle": "claude",
+   "about": "Official Claude product videos",
+   "tag": "claude"
+  },
+  {
+   "name": "OpenAI",
+   "handle": "OpenAI",
+   "about": "Codex, models and dev days",
+   "tag": "agents"
+  },
+  {
+   "name": "Google for Developers",
+   "handle": "GoogleDevelopers",
+   "about": "Gemini, Android and Google tools",
+   "tag": "android"
+  },
+  {
+   "name": "Android Developers",
+   "handle": "AndroidDevelopers",
+   "about": "Official Android & Compose",
+   "tag": "android"
+  },
+  {
+   "name": "Fireship",
+   "handle": "Fireship",
+   "about": "Fast, dense tech explainers",
+   "tag": "general"
+  },
+  {
+   "name": "freeCodeCamp.org",
+   "handle": "freecodecamp",
+   "about": "Full free courses on everything",
+   "tag": "courses"
+  },
+  {
+   "name": "NetworkChuck",
+   "handle": "NetworkChuck",
+   "about": "Networking, Linux, self-hosting, AI",
+   "tag": "servers"
+  },
+  {
+   "name": "TechWorld with Nana",
+   "handle": "TechWorldwithNana",
+   "about": "DevOps, Docker, Kubernetes, CI/CD",
+   "tag": "devops"
+  },
+  {
+   "name": "Christian Lempa",
+   "handle": "christianlempa",
+   "about": "Homelab, servers, security",
+   "tag": "servers"
+  },
+  {
+   "name": "Jeff Geerling",
+   "handle": "JeffGeerling",
+   "about": "Linux, Raspberry Pi, homelab",
+   "tag": "servers"
+  },
+  {
+   "name": "Learn Linux TV",
+   "handle": "LearnLinuxTV",
+   "about": "Linux administration",
+   "tag": "servers"
+  },
+  {
+   "name": "Tailscale",
+   "handle": "Tailscale",
+   "about": "Official Tailscale tutorials",
+   "tag": "network"
+  },
+  {
+   "name": "n8n",
+   "handle": "n8n-io",
+   "about": "Official n8n workflows & AI agents",
+   "tag": "automation"
+  },
+  {
+   "name": "Docker",
+   "handle": "Docker",
+   "about": "Official Docker",
+   "tag": "devops"
+  },
+  {
+   "name": "GitHub",
+   "handle": "GitHub",
+   "about": "Official GitHub & Copilot",
+   "tag": "git"
+  },
+  {
+   "name": "ByteByteGo",
+   "handle": "ByteByteGo",
+   "about": "System design visually explained",
+   "tag": "general"
+  },
+  {
+   "name": "Andrej Karpathy",
+   "handle": "AndrejKarpathy",
+   "about": "Deep LLM understanding",
+   "tag": "ai"
+  },
+  {
+   "name": "3Blue1Brown",
+   "handle": "3blue1brown",
+   "about": "Neural networks & transformers visualised",
+   "tag": "ai"
+  },
+  {
+   "name": "DeepLearningAI",
+   "handle": "Deeplearningai",
+   "about": "Short AI courses and talks",
+   "tag": "ai"
+  },
+  {
+   "name": "IndyDevDan",
+   "handle": "indydevdan",
+   "about": "Agentic coding & Claude Code workflows",
+   "tag": "claude"
+  },
+  {
+   "name": "Cole Medin",
+   "handle": "ColeMedin",
+   "about": "AI agents, n8n, local AI, coding agents",
+   "tag": "agents"
+  },
+  {
+   "name": "Theo - t3.gg",
+   "handle": "t3dotgg",
+   "about": "Web dev and AI tooling opinions",
+   "tag": "general"
+  },
+  {
+   "name": "Traversy Media",
+   "handle": "TraversyMedia",
+   "about": "Crash courses for web dev",
+   "tag": "courses"
+  },
+  {
+   "name": "Philipp Lackner",
+   "handle": "PhilippLackner",
+   "about": "Android & Kotlin",
+   "tag": "android"
+  },
+  {
+   "name": "DigitalOcean",
+   "handle": "DigitalOcean",
+   "about": "Servers & cloud tutorials",
+   "tag": "servers"
+  },
+  {
+   "name": "Hostinger Academy",
+   "handle": "HostingerAcademy",
+   "about": "Hostinger hosting & VPS how-tos",
+   "tag": "servers"
+  },
+  {
+   "name": "Hugging Face",
+   "handle": "HuggingFace",
+   "about": "Open models and ML",
+   "tag": "ai"
+  },
+  {
+   "name": "Matthew Berman",
+   "handle": "matthew_berman",
+   "about": "AI news and tool walkthroughs",
+   "tag": "ai"
+  },
+  {
+   "name": "Sam Witteveen",
+   "handle": "samwitteveenai",
+   "about": "LLM apps, agents, frameworks",
+   "tag": "ai"
+  }
+ ],
+ "courses": [
+  {
+   "title": "Anthropic Academy",
+   "provider": "Anthropic",
+   "url": "https://anthropic.skilljar.com",
+   "about": "Official courses on Claude, the API, MCP and Claude Code."
+  },
+  {
+   "title": "Anthropic courses (GitHub)",
+   "provider": "Anthropic",
+   "url": "https://github.com/anthropics/courses",
+   "about": "Prompt engineering, tool use and API fundamentals notebooks."
+  },
+  {
+   "title": "Claude cookbooks",
+   "provider": "Anthropic",
+   "url": "https://github.com/anthropics/anthropic-cookbook",
+   "about": "Copy-able recipes for tools, RAG, agents and more."
+  },
+  {
+   "title": "DeepLearning.AI short courses",
+   "provider": "DeepLearning.AI",
+   "url": "https://www.deeplearning.ai/short-courses/",
+   "about": "1–2 hour courses on agents, RAG, MCP, evals."
+  },
+  {
+   "title": "Hugging Face Learn",
+   "provider": "Hugging Face",
+   "url": "https://huggingface.co/learn",
+   "about": "LLM, agents, MCP and deep RL courses."
+  },
+  {
+   "title": "Neural Networks: Zero to Hero",
+   "provider": "Andrej Karpathy",
+   "url": "https://karpathy.ai/zero-to-hero.html",
+   "about": "Build GPT from scratch — the best way to truly understand LLMs."
+  },
+  {
+   "title": "Practical Deep Learning",
+   "provider": "fast.ai",
+   "url": "https://course.fast.ai",
+   "about": "Top-down practical deep learning."
+  },
+  {
+   "title": "The Missing Semester",
+   "provider": "MIT",
+   "url": "https://missing.csail.mit.edu",
+   "about": "Shell, editors, git, debugging — the tools every dev needs."
+  },
+  {
+   "title": "Linux Journey",
+   "provider": "linuxjourney.com",
+   "url": "https://linuxjourney.com",
+   "about": "Learn Linux step by step."
+  },
+  {
+   "title": "OverTheWire: Bandit",
+   "provider": "OverTheWire",
+   "url": "https://overthewire.org/wargames/bandit/",
+   "about": "Learn the command line by playing a game over SSH."
+  },
+  {
+   "title": "AI Engineer roadmap",
+   "provider": "roadmap.sh",
+   "url": "https://roadmap.sh/ai-engineer",
+   "about": "Interactive roadmap of what to learn."
+  },
+  {
+   "title": "DevOps roadmap",
+   "provider": "roadmap.sh",
+   "url": "https://roadmap.sh/devops",
+   "about": "Servers, CI/CD, containers, monitoring."
+  },
+  {
+   "title": "Linux roadmap",
+   "provider": "roadmap.sh",
+   "url": "https://roadmap.sh/linux",
+   "about": "Structured Linux learning path."
+  },
+  {
+   "title": "freeCodeCamp curriculum",
+   "provider": "freeCodeCamp",
+   "url": "https://www.freecodecamp.org/learn",
+   "about": "Free certifications in web dev, Python and more."
+  },
+  {
+   "title": "The Odin Project",
+   "provider": "The Odin Project",
+   "url": "https://www.theodinproject.com",
+   "about": "Full-stack curriculum, project based."
+  },
+  {
+   "title": "Exercism",
+   "provider": "Exercism",
+   "url": "https://exercism.org",
+   "about": "Practice exercises in 70+ languages with mentoring."
+  },
+  {
+   "title": "Android Basics with Compose",
+   "provider": "Google",
+   "url": "https://developer.android.com/courses",
+   "about": "Official Android + Kotlin + Compose course."
+  },
+  {
+   "title": "Kotlin Koans",
+   "provider": "JetBrains",
+   "url": "https://play.kotlinlang.org/koans",
+   "about": "Learn Kotlin in the browser."
+  },
+  {
+   "title": "GitHub Skills",
+   "provider": "GitHub",
+   "url": "https://skills.github.com",
+   "about": "Interactive courses on git, Actions and Copilot."
+  },
+  {
+   "title": "Docker get started",
+   "provider": "Docker",
+   "url": "https://docs.docker.com/get-started/",
+   "about": "Official hands-on Docker workshop."
+  },
+  {
+   "title": "MCP docs & tutorials",
+   "provider": "Model Context Protocol",
+   "url": "https://modelcontextprotocol.io",
+   "about": "Learn and build MCP servers and clients."
+  },
+  {
+   "title": "DigitalOcean tutorials",
+   "provider": "DigitalOcean",
+   "url": "https://www.digitalocean.com/community/tutorials",
+   "about": "Thousands of server how-tos."
+  },
+  {
+   "title": "Learn Git Branching",
+   "provider": "learngitbranching.js.org",
+   "url": "https://learngitbranching.js.org",
+   "about": "Visual, interactive git practice."
+  },
+  {
+   "title": "SQLBolt",
+   "provider": "SQLBolt",
+   "url": "https://sqlbolt.com",
+   "about": "Interactive SQL lessons."
+  }
+ ]
+}

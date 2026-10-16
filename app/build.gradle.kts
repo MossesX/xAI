@@ -45,7 +45,15 @@ android {
     }
     packaging {
         resources {
-            excludes += setOf("META-INF/versions/9/OSGI-INF/MANIFEST.MF", "META-INF/DEPENDENCIES", "META-INF/LICENSE*", "META-INF/NOTICE*")
+            excludes += setOf(
+                "META-INF/versions/9/OSGI-INF/MANIFEST.MF",
+                "META-INF/versions/*/module-info.class",
+                "module-info.class",
+                "META-INF/DEPENDENCIES",
+                "META-INF/LICENSE*",
+                "META-INF/NOTICE*",
+                "META-INF/*.SF", "META-INF/*.DSA", "META-INF/*.RSA",
+            )
         }
     }
 }

@@ -34,11 +34,35 @@ jobs:
           set -o pipefail
           gradle assembleDebug --no-daemon 2>&1 | tee build.log
 
-      - name: Surface errors
+      - name: Surface errors 1
         if: failure()
         run: |
-          grep -E "^e: |error:|What went wrong|Could not|Exception|FAILED" build.log | grep -v "^Deprecated" | head -40 \
-            | awk 'BEGIN{n=0} {n++; if (n<=8) print "::error::" $0}'
+          { grep -E "^e: " build.log | head -30; grep -A8 "What went wrong" build.log | head -20; } \
+            | grep -v "^--$" | awk 'NF' | sed -n '1,10p' | sed 's/^/::error::/'
+
+      - name: Surface errors 2
+        if: failure()
+        run: |
+          { grep -E "^e: " build.log | head -30; grep -A8 "What went wrong" build.log | head -20; } \
+            | grep -v "^--$" | awk 'NF' | sed -n '11,20p' | sed 's/^/::error::/'
+
+      - name: Surface errors 3
+        if: failure()
+        run: |
+          { grep -E "^e: " build.log | head -30; grep -A8 "What went wrong" build.log | head -20; } \
+            | grep -v "^--$" | awk 'NF' | sed -n '21,30p' | sed 's/^/::error::/'
+
+      - name: Surface errors 4
+        if: failure()
+        run: |
+          { grep -E "^e: " build.log | head -30; grep -A8 "What went wrong" build.log | head -20; } \
+            | grep -v "^--$" | awk 'NF' | sed -n '31,40p' | sed 's/^/::error::/'
+
+      - name: Surface errors 5
+        if: failure()
+        run: |
+          { grep -E "^e: " build.log | head -30; grep -A8 "What went wrong" build.log | head -20; } \
+            | grep -v "^--$" | awk 'NF' | sed -n '41,50p' | sed 's/^/::error::/'
 
       - name: Rename
         run: cp app/build/outputs/apk/debug/app-debug.apk xAI-${{ github.run_number }}.apk

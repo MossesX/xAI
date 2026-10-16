@@ -19,6 +19,16 @@ claude setup-token                                # paste token into the app
 which claude                                      # path for Settings if not on PATH
 ```
 
+## Learn suite
+- **15 tracks, 160 topics** — Claude Code, other coding agents, phone dev (Termux/Mosh/tmux), networking (SSH/Tailscale/tunnels), VPS & Linux, Docker & deploy, Git, protocols (MCP/A2A/ACP), automation (n8n), AI apps, local models, Android, foundations, security
+- **450+ live video playlists** (YouTube searches that never go stale) playing in the **built-in browser/player** with fullscreen, plus 30 channels and 24 free courses
+- Each topic: official docs, web search, **Teach me** / **Quiz me** with xAI, progress tracking
+- Optional YouTube Data API key → native video cards with thumbnails
+- Library updates over the air from `app/src/main/assets/curriculum.json` (edit `tools/gen_curriculum.py`)
+
+## Web research
+xAI searches the web and reads docs pages live (Claude Code's WebSearch/WebFetch, or the API's web search + fetch tools), prefers a configurable list of trusted sources, and cites them. Tap **Deep research** for a thorough multi-source answer.
+
 ## Features
 - Streaming chat with Markdown, code blocks with **Copy** and **Save as file**
 - Voice input, "Share → xAI" from any app
